@@ -41,3 +41,5 @@ next-env.d.ts
 
 # Uploads folder (optional)
 /uploads/
+# .gitignore
+.env*

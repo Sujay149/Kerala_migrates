@@ -1,4 +1,54 @@
-.env
-.env.local
-.env.development
-.env.production
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build output
+/dist/
+/.next/
+/.vercel/
+/.turbo/
+
+# TypeScript
+*.tsbuildinfo
+
+# Logs
+logs/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env files
+.env*
+
+# VS Code
+.vscode/
+
+# Misc
+*.swp
+*.swo
+
+# Firebase
+firebase-debug.log
+firestore-debug.log
+pglite-debug.log
+
+# Images
+*.jpg
+*.jpeg
+*.png
+*.gif
+
+# Others
+coverage/
+
+# Ignore generated files
+*.bak
+*.tmp
+
+# Ignore keystore
+keystore/
