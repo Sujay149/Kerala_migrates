@@ -1,0 +1,27 @@
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="supportGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffecd2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fcb69f;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="200" rx="12" fill="url(#supportGradient)"/>
+  <circle cx="180" cy="70" r="25" fill="white" opacity="0.9"/>
+  <circle cx="180" cy="60" r="8" fill="#fcb69f" opacity="0.8"/>
+  <path d="M168 75 Q168 68 180 68 Q192 68 192 75 Q192 82 180 82 Q168 82 168 75" fill="#fcb69f" opacity="0.8"/>
+  
+  <rect x="210" y="50" width="50" height="30" rx="8" fill="white" opacity="0.9"/>
+  <rect x="220" y="58" width="30" height="2" fill="#333" opacity="0.6"/>
+  <rect x="220" y="63" width="25" height="2" fill="#333" opacity="0.6"/>
+  <rect x="220" y="68" width="20" height="2" fill="#333" opacity="0.6"/>
+  
+  <path d="M200 75 Q205 70 210 75" fill="none" stroke="#4CAF50" stroke-width="2" opacity="0.8"/>
+  
+  <circle cx="200" cy="120" r="20" fill="white" opacity="0.9"/>
+  <rect x="192" y="112" width="16" height="10" rx="2" fill="#4CAF50" opacity="0.8"/>
+  <circle cx="200" cy="117" r="3" fill="white"/>
+  <rect x="198" y="120" width="4" height="6" fill="white"/>
+  
+  <text x="200" y="155" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#333" text-anchor="middle">🎧 24/7 Support</text>
+  <text x="200" y="175" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle" opacity="0.8">Always Here to Help</text>
+</svg>

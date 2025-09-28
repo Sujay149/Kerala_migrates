@@ -1,0 +1,135 @@
+{
+  "name": "MediBot Kerala Digital Health - Complete Healthcare Management",
+  "short_name": "MediBot Kerala",
+  "description": "Kerala Government's comprehensive digital health platform with AI assistance, medication management, telemedicine, health analytics, and 18+ advanced healthcare features",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0E7490",
+  "orientation": "portrait",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["health", "medical", "lifestyle", "productivity", "government", "telemedicine"],
+  "keywords": ["kerala health", "digital health", "medication reminders", "telemedicine", "health analytics", "AI healthcare", "medical records", "government healthcare"],
+  "screenshots": [
+    {
+      "src": "/main.png",
+      "sizes": "1200x800",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "MediBot Kerala Dashboard - Complete Healthcare Management"
+    },
+    {
+      "src": "/mobileview.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "MediBot Kerala Mobile - Healthcare On The Go"
+    }
+  ],
+  "icons": [
+    {
+      "src": "/kerala-health-logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/kerala-health-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/kerala-health-logo-maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/kerala-health-logo-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "AI Chat Assistant",
+      "short_name": "AI Chat",
+      "description": "Get instant medical advice from AI healthcare assistant",
+      "url": "/chat",
+      "icons": [{ "src": "https://source.unsplash.com/random/96x96/?chat", "sizes": "96x96" }]
+    },
+    {
+      "name": "Smart Medication Reminders",
+      "short_name": "Medications",
+      "description": "Never miss medicine with smart reminders and tracking",
+      "url": "/medications",
+      "icons": [{ "src": "https://source.unsplash.com/random/96x96/?medicine", "sizes": "96x96" }]
+    },
+    {
+      "name": "QR Health Profile",
+      "short_name": "QR Profile",
+      "description": "Quick access to health profile via QR code",
+      "url": "/profile-qr",
+      "icons": [{ "src": "https://source.unsplash.com/random/96x96/?qrcode", "sizes": "96x96" }]
+    },
+    {
+      "name": "Health Records",
+      "short_name": "Records",
+      "description": "Manage and access digital health records",
+      "url": "/health/records",
+      "icons": [{ "src": "https://source.unsplash.com/random/96x96/?documents", "sizes": "96x96" }]
+    },
+    {
+      "name": "Document Upload",
+      "short_name": "Upload",
+      "description": "Upload and store medical documents securely",
+      "url": "/documents",
+      "icons": [{ "src": "https://source.unsplash.com/random/96x96/?upload", "sizes": "96x96" }]
+    },
+    {
+      "name": "Appointments",
+      "short_name": "Appointments",
+      "description": "Schedule and manage healthcare appointments",
+      "url": "/appointments",
+      "icons": [{ "src": "https://source.unsplash.com/random/96x96/?calendar", "sizes": "96x96" }]
+    },
+    {
+      "name": "Emergency Services",
+      "short_name": "Emergency",
+      "description": "Quick access to emergency contacts and services",
+      "url": "/emergency",
+      "icons": [{ "src": "https://source.unsplash.com/random/96x96/?emergency", "sizes": "96x96" }]
+    },
+    {
+      "name": "Health Tracking",
+      "short_name": "Tracking",
+      "description": "Monitor vital signs and health metrics",
+      "url": "/health-tracking",
+      "icons": [{ "src": "https://source.unsplash.com/random/96x96/?vitals", "sizes": "96x96" }]
+    },
+    {
+      "name": "Medical History",
+      "short_name": "History",
+      "description": "Complete medical history and treatment records",
+      "url": "/history",
+      "icons": [{ "src": "https://source.unsplash.com/random/96x96/?history", "sizes": "96x96" }]
+    },
+    {
+      "name": "Family Health",
+      "short_name": "Family",
+      "description": "Manage health records for family members",
+      "url": "/collaborations",
+      "icons": [{ "src": "https://source.unsplash.com/random/96x96/?family", "sizes": "96x96" }]
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "webapp",
+      "url": "https://medibot-kerala.gov.in/"
+    }
+  ],
+  "prefer_related_applications": false
+}

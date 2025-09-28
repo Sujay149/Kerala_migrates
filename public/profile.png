@@ -1,0 +1,15 @@
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="profileGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fa709a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fee140;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="200" rx="12" fill="url(#profileGradient)"/>
+  <circle cx="200" cy="80" r="35" fill="white" opacity="0.9"/>
+  <circle cx="200" cy="70" r="12" fill="#fa709a" opacity="0.7"/>
+  <path d="M175 95 Q175 85 200 85 Q225 85 225 95 Q225 105 200 105 Q175 105 175 95" fill="#fa709a" opacity="0.7"/>
+  <rect x="120" y="130" width="160" height="30" fill="white" opacity="0.7" rx="15"/>
+  <text x="200" y="150" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle" font-weight="bold">Manage Profile</text>
+  <text x="200" y="185" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">👤 Profile & Settings</text>
+</svg>

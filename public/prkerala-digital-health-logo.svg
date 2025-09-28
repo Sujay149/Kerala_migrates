@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Government of Kerala Digital Health Record Logo -->
+  <g>
+    <!-- Outer circle -->
+    <circle cx="200" cy="200" r="180" stroke="#1e40af" stroke-width="8" fill="white"/>
+    <circle cx="200" cy="200" r="165" stroke="#1e40af" stroke-width="2" fill="none"/>
+    
+    <!-- Government of Kerala text (top arc) -->
+    <path id="top-arc" d="M 80 200 A 120 120 0 0 1 320 200" fill="none"/>
+    <text font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1e40af">
+      <textPath href="#top-arc" startOffset="50%" text-anchor="middle">
+        GOVERNMENT OF KERALA
+      </textPath>
+    </text>
+    
+    <!-- Digital Health Record text (bottom) -->
+    <rect x="70" y="320" width="260" height="30" fill="#1e40af" rx="15"/>
+    <text x="200" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">
+      DIGITAL HEALTH RECORD
+    </text>
+    
+    <!-- Kerala map outline -->
+    <path d="M160 120 Q140 130 130 150 Q125 170 130 190 Q135 220 150 240 Q170 260 190 265 Q210 270 225 260 Q240 250 245 235 Q250 220 245 200 Q240 180 230 160 Q220 140 200 130 Q180 120 160 120 Z" 
+          stroke="#22c55e" stroke-width="2" fill="#dcfce7"/>
+    
+    <!-- Medical cross -->
+    <rect x="185" y="170" width="30" height="8" fill="#1e40af" rx="4"/>
+    <rect x="196" y="159" width="8" height="30" fill="#1e40af" rx="4"/>
+    
+    <!-- Green leaves -->
+    <path d="M210 155 Q220 150 225 160 Q220 170 210 165 Z" fill="#22c55e"/>
+    <path d="M225 160 Q235 155 240 165 Q235 175 225 170 Z" fill="#22c55e"/>
+    
+    <!-- Family figures -->
+    <g transform="translate(185, 200)">
+      <!-- Adult figure 1 -->
+      <circle cx="8" cy="8" r="4" fill="#1e40af"/>
+      <rect x="6" y="12" width="4" height="12" fill="#1e40af" rx="2"/>
+      <rect x="4" y="16" width="2" height="8" fill="#1e40af" rx="1"/>
+      <rect x="10" y="16" width="2" height="8" fill="#1e40af" rx="1"/>
+      
+      <!-- Child figure -->
+      <circle cx="20" cy="10" r="3" fill="#1e40af"/>
+      <rect x="18" y="13" width="4" height="9" fill="#1e40af" rx="2"/>
+      <rect x="17" y="16" width="2" height="6" fill="#1e40af" rx="1"/>
+      <rect x="21" y="16" width="2" height="6" fill="#1e40af" rx="1"/>
+      
+      <!-- Adult figure 2 -->
+      <circle cx="32" cy="8" r="4" fill="#1e40af"/>
+      <rect x="30" y="12" width="4" height="12" fill="#1e40af" rx="2"/>
+      <rect x="28" y="16" width="2" height="8" fill="#1e40af" rx="1"/>
+      <rect x="34" y="16" width="2" height="8" fill="#1e40af" rx="1"/>
+    </g>
+  </g>
+</svg>

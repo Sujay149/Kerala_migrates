@@ -1,0 +1,43 @@
+# Node dependencies
+/node_modules
+
+# Next.js build outputs
+/.next/
+/out/
+
+# Production builds
+/build/
+# dependencies
+/node_modules
+
+# next.js build output
+/.next
+/out
+
+# production
+/build
+/dist
+
+# misc
+.DS_Store
+*.log
+.env
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+# Keep this commented if you want to push .env files
+# .env*
+
+# Vercel
+.vercel/
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Uploads folder (optional)
+/uploads/

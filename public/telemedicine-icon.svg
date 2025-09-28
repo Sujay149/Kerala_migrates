@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Telemedicine Icon -->
+  <g stroke="#2C7A7B" stroke-width="2" fill="none">
+    <!-- WiFi signals -->
+    <path d="M50 15 C60 15, 70 20, 70 30" stroke-linecap="round"/>
+    <path d="M50 15 C40 15, 30 20, 30 30" stroke-linecap="round"/>
+    <path d="M50 20 C55 20, 60 23, 60 28" stroke-linecap="round"/>
+    <path d="M50 20 C45 20, 40 23, 40 28" stroke-linecap="round"/>
+    
+    <!-- Stethoscope -->
+    <circle cx="25" cy="45" r="8" stroke="#2C7A7B" fill="#E6FFFA"/>
+    <circle cx="25" cy="45" r="3" fill="#2C7A7B"/>
+    <path d="M25 53 Q25 70, 45 75 Q50 76, 55 75" stroke-linecap="round"/>
+    <circle cx="55" cy="75" r="4" fill="#2C7A7B"/>
+    
+    <!-- Heart rate line -->
+    <path d="M35 65 L40 65 L42 55 L44 75 L46 45 L48 85 L50 65 L75 65" stroke="#48BB78" stroke-width="2" fill="none"/>
+    
+    <!-- Medical cross -->
+    <rect x="70" y="50" width="12" height="4" fill="#2C7A7B" rx="2"/>
+    <rect x="74" y="46" width="4" height="12" fill="#2C7A7B" rx="2"/>
+    
+    <!-- Device/tablet -->
+    <rect x="15" y="75" width="30" height="20" rx="3" stroke="#2C7A7B" fill="#F7FAFC"/>
+    <rect x="18" y="78" width="24" height="14" fill="#E2E8F0"/>
+    
+    <!-- Text "TELEMEDICINE" at bottom -->
+    <text x="50" y="97" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#2C7A7B">TELEMEDICINE</text>
+  </g>
+</svg>

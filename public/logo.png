@@ -1,0 +1,70 @@
+<svg width="512" height="512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="keralaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0E7490;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0D9488;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0F766E;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E0F2FE;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Main Circle Background -->
+  <circle cx="256" cy="256" r="240" fill="url(#keralaGradient)" stroke="#FFFFFF" stroke-width="8"/>
+  
+  <!-- Kerala Map Outline (Simplified) -->
+  <path d="M160 180 Q180 160 220 170 Q250 175 280 185 Q320 200 340 230 Q350 250 340 280 Q330 320 310 340 Q280 360 240 355 Q200 350 170 330 Q150 310 145 280 Q140 250 150 220 Q155 200 160 180" 
+        fill="white" fill-opacity="0.2" stroke="white" stroke-width="2"/>
+  
+  <!-- Central Medical Cross/Plus -->
+  <g transform="translate(256,256)">
+    <!-- Cross Background Circle -->
+    <circle cx="0" cy="0" r="80" fill="white" fill-opacity="0.95"/>
+    
+    <!-- Medical Cross -->
+    <rect x="-8" y="-40" width="16" height="80" fill="url(#keralaGradient)" rx="3"/>
+    <rect x="-40" y="-8" width="80" height="16" fill="url(#keralaGradient)" rx="3"/>
+    
+    <!-- Small Heart in Center -->
+    <path d="M-12 -5 C-12 -10 -7 -15 0 -10 C7 -15 12 -10 12 -5 C12 0 0 12 0 12 C0 12 -12 0 -12 -5" 
+          fill="#FF6B6B" opacity="0.8"/>
+  </g>
+  
+  <!-- Surrounding Health Icons -->
+  <g opacity="0.7" fill="white">
+    <!-- Stethoscope Icon (Top) -->
+    <circle cx="256" cy="120" r="6"/>
+    <path d="M250 120 Q250 110 256 110 Q262 110 262 120" stroke="white" stroke-width="3" fill="none"/>
+    <path d="M250 120 Q240 130 240 145" stroke="white" stroke-width="3" fill="none"/>
+    <path d="M262 120 Q272 130 272 145" stroke="white" stroke-width="3" fill="none"/>
+    
+    <!-- Pills Icon (Right) -->
+    <ellipse cx="390" cy="256" rx="8" ry="15" fill="white" opacity="0.8"/>
+    <rect x="382" y="248" width="16" height="8" fill="url(#keralaGradient)" opacity="0.6"/>
+    
+    <!-- Heart Rate Icon (Bottom) -->
+    <path d="M230 390 L240 380 L250 395 L260 375 L270 390 L280 385" 
+          stroke="white" stroke-width="3" fill="none"/>
+    
+    <!-- Shield Icon (Left) -->
+    <path d="M122 240 Q122 235 127 235 Q132 235 132 240 L132 265 Q127 275 122 265 Z" 
+          fill="white" opacity="0.8"/>
+  </g>
+  
+  <!-- Kerala Text Arc (Top) -->
+  <path id="topArc" d="M 140 180 A 120 120 0 0 1 372 180" fill="none"/>
+  <text font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white">
+    <textPath href="#topArc" startOffset="50%" text-anchor="middle">KERALA</textPath>
+  </text>
+  
+  <!-- Digital Health Text Arc (Bottom) -->
+  <path id="bottomArc" d="M 372 332 A 120 120 0 0 1 140 332" fill="none"/>
+  <text font-family="Arial, sans-serif" font-size="20" font-weight="normal" fill="white" opacity="0.9">
+    <textPath href="#bottomArc" startOffset="50%" text-anchor="middle">DIGITAL HEALTH</textPath>
+  </text>
+  
+  <!-- MediBot Text (Center Bottom) -->
+  <text x="256" y="420" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="white" text-anchor="middle" opacity="0.95">MediBot</text>
+</svg>

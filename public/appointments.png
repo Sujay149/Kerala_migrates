@@ -1,0 +1,19 @@
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="appointmentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#43e97b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#38f9d7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="200" rx="12" fill="url(#appointmentGradient)"/>
+  <rect x="120" y="40" width="160" height="120" fill="white" opacity="0.9" rx="8"/>
+  <rect x="130" y="50" width="140" height="20" fill="#43e97b" opacity="0.8" rx="4"/>
+  <text x="200" y="65" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="bold">SEPTEMBER 2025</text>
+  <rect x="140" y="80" width="15" height="15" fill="#38f9d7" opacity="0.6" rx="2"/>
+  <rect x="160" y="80" width="15" height="15" fill="#43e97b" opacity="0.4" rx="2"/>
+  <rect x="180" y="80" width="15" height="15" fill="#38f9d7" opacity="0.6" rx="2"/>
+  <rect x="200" y="80" width="15" height="15" fill="#43e97b" opacity="0.8" rx="2"/>
+  <rect x="140" y="100" width="15" height="15" fill="#43e97b" opacity="0.4" rx="2"/>
+  <rect x="160" y="100" width="15" height="15" fill="#38f9d7" opacity="0.6" rx="2"/>
+  <text x="200" y="180" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">📅 Appointments</text>
+</svg>

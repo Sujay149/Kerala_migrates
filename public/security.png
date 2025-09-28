@@ -1,0 +1,21 @@
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="securityGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffecd2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fcb69f;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="200" rx="12" fill="url(#securityGradient)"/>
+  <rect x="175" y="50" width="50" height="35" rx="5" fill="white" opacity="0.9"/>
+  <path d="M185 50 Q185 40 200 40 Q215 40 215 50" fill="none" stroke="white" stroke-width="4" opacity="0.9"/>
+  <circle cx="190" cy="67" r="3" fill="#4CAF50"/>
+  <rect x="188" y="70" width="4" height="8" fill="#4CAF50"/>
+  <rect x="205" y="67" width="3" height="3" fill="#4CAF50"/>
+  <rect x="210" y="67" width="3" height="3" fill="#4CAF50"/>
+  <rect x="215" y="67" width="3" height="3" fill="#4CAF50"/>
+  <circle cx="200" cy="110" r="25" fill="white" opacity="0.9"/>
+  <path d="M185 110 Q185 95 200 95 Q215 95 215 110 L210 110 Q210 100 200 100 Q190 100 190 110 Z" fill="#4CAF50" opacity="0.8"/>
+  <circle cx="200" cy="110" r="6" fill="#4CAF50"/>
+  <text x="200" y="155" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#333" text-anchor="middle">🔐 Secure & Private</text>
+  <text x="200" y="175" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle" opacity="0.8">Your Data Protected</text>
+</svg>

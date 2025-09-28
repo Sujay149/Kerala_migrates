@@ -1,0 +1,51 @@
+@echo off
+echo 🔥 Firebase SIH-Kerala Project Setup Script
+echo ===========================================
+echo.
+
+echo 🚨 CRITICAL: You must complete these steps in Firebase Console FIRST:
+echo.
+
+echo 1. 📡 ENABLE REQUIRED APIS:
+echo    Go to: https://console.cloud.google.com/apis/dashboard?project=sih-kerala
+echo    Enable these APIs:
+echo    ✅ Firestore API
+echo    ✅ Identity and Access Management (IAM) API  
+echo    ✅ Cloud Identity Toolkit API
+echo    ✅ Firebase Management API
+echo    ✅ Cloud Resource Manager API
+echo.
+
+echo 2. 🗄️ CREATE FIRESTORE DATABASE:
+echo    Go to: https://console.firebase.google.com/project/sih-kerala/firestore
+echo    ✅ Click 'Create database'
+echo    ✅ Start in 'test mode'
+echo    ✅ Choose location: us-central1
+echo.
+
+echo 3. 🔐 ENABLE AUTHENTICATION:
+echo    Go to: https://console.firebase.google.com/project/sih-kerala/authentication
+echo    ✅ Click 'Get started'
+echo    ✅ Enable Email/Password sign-in
+echo    ✅ Enable Google sign-in  
+echo    ✅ Add authorized domains: localhost, localhost:3000
+echo.
+
+echo 4. 📦 ENABLE CLOUD STORAGE:
+echo    Go to: https://console.firebase.google.com/project/sih-kerala/storage
+echo    ✅ Click 'Get started'
+echo    ✅ Start in test mode
+echo.
+
+echo 5. 🔑 GENERATE SERVICE ACCOUNT:
+echo    Go to: https://console.firebase.google.com/project/sih-kerala/settings/serviceaccounts/adminsdk
+echo    ✅ Click 'Generate new private key'
+echo    ✅ Download JSON file
+echo    ✅ Update .env.local with the credentials
+echo.
+
+echo After completing ALL steps above, run your app again with: npm run dev
+echo.
+echo 💡 Need help? Check the detailed guide in SIH_KERALA_SETUP_GUIDE.md
+
+pause

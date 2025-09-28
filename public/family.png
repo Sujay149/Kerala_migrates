@@ -1,0 +1,27 @@
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="familyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffecd2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fcb69f;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="200" rx="12" fill="url(#familyGradient)"/>
+  <circle cx="160" cy="70" r="18" fill="white" opacity="0.9"/>
+  <circle cx="160" cy="65" r="6" fill="#fcb69f" opacity="0.8"/>
+  <path d="M150 75 Q150 70 160 70 Q170 70 170 75 Q170 80 160 80 Q150 80 150 75" fill="#fcb69f" opacity="0.8"/>
+  
+  <circle cx="240" cy="70" r="16" fill="white" opacity="0.9"/>
+  <circle cx="240" cy="66" r="5" fill="#fcb69f" opacity="0.8"/>
+  <path d="M232 75 Q232 71 240 71 Q248 71 248 75 Q248 78 240 78 Q232 78 232 75" fill="#fcb69f" opacity="0.8"/>
+  
+  <circle cx="180" cy="110" r="12" fill="white" opacity="0.9"/>
+  <circle cx="180" cy="107" r="4" fill="#fcb69f" opacity="0.8"/>
+  <path d="M174 113 Q174 111 180 111 Q186 111 186 113 Q186 115 180 115 Q174 115 174 113" fill="#fcb69f" opacity="0.8"/>
+  
+  <circle cx="220" cy="110" r="12" fill="white" opacity="0.9"/>
+  <circle cx="220" cy="107" r="4" fill="#fcb69f" opacity="0.8"/>
+  <path d="M214 113 Q214 111 220 111 Q226 111 226 113 Q226 115 220 115 Q214 115 214 113" fill="#fcb69f" opacity="0.8"/>
+  
+  <text x="200" y="150" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#333" text-anchor="middle">👨‍👩‍👧‍👦 Family Health</text>
+  <text x="200" y="175" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle" opacity="0.8">Manage Together</text>
+</svg>

@@ -1,0 +1,49 @@
+rules_version = '2';
+
+// Firebase Storage Security Rules for Document Management System
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Default rule - deny access to everything unless explicitly allowed
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+    
+    // Allow uploads to the documents folder for authenticated users
+    match /documents/{userId}/{submissionId}/{fileName} {
+      // Allow read/write if user owns the document
+      allow read, write: if request.auth != null;
+      
+      // Allow uploads with size limit and file type restrictions
+      allow create: if request.auth != null
+        && resource == null
+        && request.resource.size < 10 * 1024 * 1024  // 10MB limit
+        && request.resource.contentType.matches('image/.*|application/pdf');
+    }
+    
+    // Allow uploads to the alerts folder
+    match /alerts/{fileName} {
+      // Allow anyone to read alert images
+      allow read: if true;
+      
+      // Allow anyone to upload alert images temporarily for testing
+      allow write: if true;
+      
+      // Original rule (uncomment when testing is complete)
+      // allow write: if request.auth != null
+      //   && request.resource.size < 5 * 1024 * 1024  // 5MB limit
+      //   && request.resource.contentType.matches('image/.*');
+    }
+    
+    // For development - allow all authenticated users to read/write
+    // Remove this in production!
+    match /development/{allPaths=**} {
+      allow read, write: if request.auth != null;
+    }
+    
+    // Allow admins to read all documents
+    match /{allPaths=**} {
+      allow read, write: if request.auth != null
+        && request.auth.token.admin == true;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="historyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#c3cfe2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c3cfe2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="200" rx="12" fill="url(#historyGradient)"/>
+  <rect x="80" y="40" width="240" height="120" fill="white" opacity="0.9" rx="8"/>
+  <rect x="100" y="60" width="60" height="2" fill="#333" opacity="0.5"/>
+  <rect x="100" y="70" width="80" height="2" fill="#333" opacity="0.5"/>
+  <rect x="100" y="80" width="50" height="2" fill="#333" opacity="0.5"/>
+  <rect x="100" y="95" width="70" height="2" fill="#333" opacity="0.5"/>
+  <rect x="100" y="105" width="90" height="2" fill="#333" opacity="0.5"/>
+  <rect x="100" y="115" width="40" height="2" fill="#333" opacity="0.5"/>
+  <rect x="100" y="130" width="85" height="2" fill="#333" opacity="0.5"/>
+  <rect x="100" y="140" width="60" height="2" fill="#333" opacity="0.5"/>
+  <circle cx="90" cy="70" r="3" fill="#667eea" opacity="0.7"/>
+  <circle cx="90" cy="105" r="3" fill="#667eea" opacity="0.7"/>
+  <circle cx="90" cy="140" r="3" fill="#667eea" opacity="0.7"/>
+  <text x="200" y="185" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#333" text-anchor="middle">📖 Medical History</text>
+</svg>

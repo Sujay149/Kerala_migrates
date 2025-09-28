@@ -1,0 +1,24 @@
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="analyticsGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffecd2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fcb69f;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="200" rx="12" fill="url(#analyticsGradient)"/>
+  <rect x="150" y="50" width="100" height="70" rx="8" fill="white" opacity="0.9"/>
+  <polyline points="160,110 170,100 180,105 190,95 200,100 210,85 220,90 230,80 240,85" 
+            fill="none" stroke="#4CAF50" stroke-width="3" opacity="0.8"/>
+  <circle cx="170" cy="100" r="3" fill="#4CAF50"/>
+  <circle cx="190" cy="95" r="3" fill="#4CAF50"/>
+  <circle cx="210" cy="85" r="3" fill="#4CAF50"/>
+  <circle cx="230" cy="80" r="3" fill="#4CAF50"/>
+  <rect x="160" y="110" width="8" height="5" fill="#2196F3" opacity="0.7"/>
+  <rect x="172" y="108" width="8" height="7" fill="#2196F3" opacity="0.7"/>
+  <rect x="184" y="105" width="8" height="10" fill="#2196F3" opacity="0.7"/>
+  <rect x="196" y="102" width="8" height="13" fill="#2196F3" opacity="0.7"/>
+  <rect x="208" y="100" width="8" height="15" fill="#2196F3" opacity="0.7"/>
+  <rect x="220" y="98" width="8" height="17" fill="#2196F3" opacity="0.7"/>
+  <text x="200" y="145" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#333" text-anchor="middle">📊 Health Analytics</text>
+  <text x="200" y="165" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle" opacity="0.8">Track Progress</text>
+</svg>
