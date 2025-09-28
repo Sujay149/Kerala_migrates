@@ -4,7 +4,7 @@ import * as CryptoJS from 'crypto-js';
 
 // Encryption key for QR data
 const QR_ENCRYPTION_KEY = process.env.NEXT_PUBLIC_QR_ENCRYPTION_KEY || 'medibot-qr-key-32-characters-long';
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://kerala-migrates-r4io.onrender.com/';
 
 export async function POST(req: NextRequest) {
   try {
