@@ -116,10 +116,9 @@ function SidebarComponent({ isOpen = false, onClose }: SidebarProps) {
     
     { icon: User, label: "Migrant Profile", href: "/migrant-profile" },
     { icon: Home, label: "Dashboard", href: "/dashboard" },
-    { icon: Upload, label: "Upload Documents", href: "/documents" },
     { icon: QrCode, label: "My QR Code", href: "/qr-codes" },
     { icon: FileText, label: "Health Records", href: "/health/records" },
-    { icon: MessageCircle, label: "AI Chatbot", href: "/chat" },
+    // { icon: MessageCircle, label: "AI Chatbot", href: "/chat" },
     { icon: FileText, label: "Info Summarizer", href: "/summarizer" },
     { icon: Pill, label: "Medications", href: "/medications" },
     { icon: Calendar, label: "Appointments", href: "/appointments" },
