@@ -246,7 +246,9 @@ function ChatContent() {
       if (user) {
         if (user) {
           if (user) {
-            localStorage.removeItem(`lastSessionId_${user.uid}`);
+            if (user) {
+              localStorage.removeItem(`lastSessionId_${user.uid}`);
+            }
           }
         }
       }
@@ -2182,7 +2184,9 @@ CONVERSATION PATTERNS:
                                 setSessions((prev) => prev.filter((s) => s.id !== session.id));
                                 if (currentSession?.id === session.id) {
                                   setCurrentSession(null);
-                                  localStorage.removeItem(`lastSessionId_${user.uid}`);
+                                  if (user) {
+                                    localStorage.removeItem(`lastSessionId_${user.uid}`);
+                                  }
                                 }
                                 toast.success("Chat session deleted!");
                               } else {
