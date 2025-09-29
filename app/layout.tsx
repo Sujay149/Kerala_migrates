@@ -10,6 +10,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { ErrorBoundary, AsyncErrorBoundary } from "@/components/ErrorBoundary";
 import { ConnectionStatus } from "@/hooks/useNetworkStatus";
 import { NavigationProgressBar } from "@/components/OptimizedNavigation";
+import Chatbot from "@/components/chatbot/Chatbot";
 
 
 
@@ -218,6 +219,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </React.Suspense>
           </SmoothNavigator>
           <Toaster position="top-right" />
+          <Chatbot />
         </ThemeProvider>
       </LoadingProvider>
     </AsyncErrorBoundary>
