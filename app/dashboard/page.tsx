@@ -233,7 +233,7 @@ export default function DashboardPage() {
                 </Card>
 
                 {/* WellBeing Meter Card */}
-                <Card className="rounded-2xl shadow-lg border border-border bg-card hover:scale-[1.03] transition-transform duration-200">
+                {/* <Card className="rounded-2xl shadow-lg border border-border bg-card hover:scale-[1.03] transition-transform duration-200">
                   <CardHeader className="flex flex-row items-center justify-between p-5 pb-2">
                     <CardTitle className="text-base font-semibold text-muted-foreground">
                       WellBeing Meter
@@ -249,7 +249,7 @@ export default function DashboardPage() {
                     </div>
                     <Progress value={healthScore} className="h-2 bg-muted/80 rounded-full" />
                   </CardContent>
-                </Card>
+                </Card> */}
 
                 {/* Health Records Card */}
                 <Card className="rounded-2xl shadow-lg border border-border bg-card hover:scale-[1.03] transition-transform duration-200">

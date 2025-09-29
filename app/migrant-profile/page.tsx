@@ -660,7 +660,16 @@ const DocumentsUploadForm = ({ isEditing }: { isEditing: boolean }) => {
               </Button>
             </div>
           </div>
-          
+           <div>
+            <Label>Health Certificates</Label>
+            <div className="mt-2 border-2 border-dashed border-gray-300 rounded-lg p-6 text-center">
+              <Upload className="h-12 w-12 text-gray-400 mx-auto mb-2" />
+              <p className="text-sm text-gray-500">Upload any skill certificates or training documents (PDF, JPG, PNG)</p>
+              <Button disabled={!isEditing} className="mt-2" size="sm">
+                Choose Files
+              </Button>
+            </div>
+          </div>
           <div>
             <Label>Skill Certificates</Label>
             <div className="mt-2 border-2 border-dashed border-gray-300 rounded-lg p-6 text-center">
