@@ -65,6 +65,13 @@ interface MigrantProfile {
   emergencyName: string;
   familySize: string;
   dependents: string;
+  familyMembers?: {
+    name: string;
+    age: string;
+    gender: string;
+    bloodGroup: string;
+    relation: string;
+  }[];
 }
 
 const Header = ({ user, onMenuToggle }: { user: any; onMenuToggle: () => void }) => {
@@ -711,6 +718,7 @@ export default function MigrantProfilePage() {
     emergencyName: '',
     familySize: '',
     dependents: '',
+    familyMembers: [],
   });
 
   const handleProfileChange = (field: keyof MigrantProfile, value: string) => {
@@ -719,6 +727,39 @@ export default function MigrantProfilePage() {
         return { ...prev, [field]: value.split(',').map(item => item.trim()).filter(Boolean) };
       }
       return { ...prev, [field]: value };
+    });
+    setProfile(prev => {
+      if (field === 'secondarySkills' || field === 'certifications') {
+        return { ...prev, [field]: value.split(',').map(item => item.trim()).filter(Boolean) };
+      }
+
+      // If familySize changed, ensure familyMembers array matches the new count
+      if (field === 'familySize') {
+        const newSize = value === '6+' ? 6 : parseInt(value || '0', 10) || 0;
+        const existing = prev.familyMembers || [];
+        const newMembers = [...existing];
+        if (newMembers.length < newSize) {
+          for (let i = newMembers.length; i < newSize; i++) {
+            newMembers.push({ name: '', age: '', gender: '', bloodGroup: '', relation: '' });
+          }
+        } else if (newMembers.length > newSize) {
+          newMembers.length = newSize;
+        }
+        return { ...prev, [field]: value, familyMembers: newMembers } as MigrantProfile;
+      }
+
+      return { ...prev, [field]: value };
+    });
+  };
+  const handleFamilyMemberChange = (index: number, memberField: string, value: string) => {
+    setProfile(prev => {
+      const members = prev.familyMembers ? [...prev.familyMembers] : [];
+      while (members.length <= index) {
+        members.push({ name: '', age: '', gender: '', bloodGroup: '', relation: '' });
+      }
+      // @ts-ignore
+      members[index] = { ...members[index], [memberField]: value };
+      return { ...prev, familyMembers: members };
     });
   };
 
@@ -731,85 +772,129 @@ export default function MigrantProfilePage() {
       toast.error('Failed to update profile');
     }
   };
-
-  if (loading) {
-    return <div className="flex items-center justify-center min-h-screen">Loading...</div>;
-  }
-
   return (
     <AuthGuard>
-      <div className="min-h-screen bg-gray-50 flex">
-        {/* Sidebar (same as dashboard) */}
-        <div className="hidden md:block">
-          <Sidebar />
-        </div>
-        {/* Main content */}
-        <div className="flex-1 p-6">
-          <div className="max-w-4xl mx-auto">
-            <div className="flex items-center justify-between mb-6">
-              <h1 className="text-2xl font-semibold text-slate-800">Profile Information</h1>
-              <div className="flex items-center space-x-2">
-                <Button
-                  onClick={() => setIsEditing(!isEditing)}
-                  variant="outline"
-                  size="sm"
-                  className="flex items-center space-x-2"
-                >
-                  <Edit className="h-4 w-4" />
-                  <span>{isEditing ? 'Cancel' : 'Edit'}</span>
-                </Button>
-                {isEditing && (
-                  <Button
-                    onClick={handleSave}
-                    size="sm"
-                    className="flex items-center space-x-2"
-                  >
-                    <Save className="h-4 w-4" />
-                    <span>Submit</span>
-                  </Button>
-                )}
+      <div className="bg-background text-foreground min-h-screen">
+        <div className="flex h-screen overflow-hidden">
+          <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+
+          <div className="flex-1 flex flex-col">
+            <Header user={user} onMenuToggle={() => setSidebarOpen(!sidebarOpen)} />
+
+            <div className="flex flex-1 flex-col overflow-hidden">
+              {/* Top navigation bar for sections */}
+              <div className="bg-white border-b">
+                <div className="px-6 py-4">
+                  <NavigationSidebar activeTab={activeTab} onTabChange={setActiveTab} />
+                </div>
               </div>
+
+              <main className="flex-1 p-6 overflow-auto">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center space-x-2">
+                    <h2 className="text-xl font-semibold">Migrant Profile</h2>
+                    <Badge>Draft</Badge>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    {!isEditing ? (
+                      <Button onClick={() => setIsEditing(true)}>Edit</Button>
+                    ) : (
+                      <Button onClick={handleSave}>
+                        <Save className="mr-2" /> Save
+                      </Button>
+                    )}
+                  </div>
+                </div>
+
+                {activeTab === 'skills' && (
+                  <SkillsDetailsForm profile={profile} onProfileChange={handleProfileChange} isEditing={isEditing} />
+                )}
+
+                {activeTab === 'contact' && (
+                  <ContactDetailsForm profile={profile} onProfileChange={handleProfileChange} isEditing={isEditing} />
+                )}
+
+                {activeTab === 'family' && (
+                  <>
+                    <FamilyDetailsForm profile={profile} onProfileChange={handleProfileChange} isEditing={isEditing} />
+
+                    {/* Dynamic family member forms based on familySize */}
+                    {(() => {
+                      const count = profile.familySize === '6+' ? 6 : parseInt(profile.familySize || '0', 10) || 0;
+                      if (count <= 0) return null;
+                      return (
+                        <div className="mt-6 space-y-4">
+                          <h3 className="text-lg font-medium">Family Members</h3>
+                          {Array.from({ length: count }).map((_, idx) => {
+                            const member = (profile.familyMembers && profile.familyMembers[idx]) || { name: '', age: '', gender: '', bloodGroup: '', relation: '' };
+                            return (
+                              <div key={idx} className="p-4 border rounded-lg bg-white">
+                                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                  <div>
+                                    <Label>Name</Label>
+                                    <Input value={member.name} onChange={(e) => handleFamilyMemberChange(idx, 'name', e.target.value)} disabled={!isEditing} className="mt-1" />
+                                  </div>
+                                  <div>
+                                    <Label>Age</Label>
+                                    <Input value={member.age} onChange={(e) => handleFamilyMemberChange(idx, 'age', e.target.value)} disabled={!isEditing} className="mt-1" />
+                                  </div>
+                                  <div>
+                                    <Label>Gender</Label>
+                                    <Select value={member.gender} onValueChange={(v) => handleFamilyMemberChange(idx, 'gender', v)} disabled={!isEditing}>
+                                      <SelectTrigger className="mt-1">
+                                        <SelectValue placeholder="Select gender" />
+                                      </SelectTrigger>
+                                      <SelectContent>
+                                        <SelectItem value="male">Male</SelectItem>
+                                        <SelectItem value="female">Female</SelectItem>
+                                        <SelectItem value="other">Other</SelectItem>
+                                      </SelectContent>
+                                    </Select>
+                                  </div>
+                                </div>
+
+                                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+                                  <div>
+                                    <Label>Blood Group</Label>
+                                    <Select value={member.bloodGroup} onValueChange={(v) => handleFamilyMemberChange(idx, 'bloodGroup', v)} disabled={!isEditing}>
+                                      <SelectTrigger className="mt-1">
+                                        <SelectValue placeholder="Select blood group" />
+                                      </SelectTrigger>
+                                      <SelectContent>
+                                        <SelectItem value="A+">A+</SelectItem>
+                                        <SelectItem value="A-">A-</SelectItem>
+                                        <SelectItem value="B+">B+</SelectItem>
+                                        <SelectItem value="B-">B-</SelectItem>
+                                        <SelectItem value="O+">O+</SelectItem>
+                                        <SelectItem value="O-">O-</SelectItem>
+                                        <SelectItem value="AB+">AB+</SelectItem>
+                                        <SelectItem value="AB-">AB-</SelectItem>
+                                      </SelectContent>
+                                    </Select>
+                                  </div>
+                                  <div>
+                                    <Label>Relation</Label>
+                                    <Input value={member.relation} onChange={(e) => handleFamilyMemberChange(idx, 'relation', e.target.value)} disabled={!isEditing} className="mt-1" />
+                                  </div>
+                                  <div>
+                                    <Label>Notes (optional)</Label>
+                                    <Input value={''} disabled className="mt-1" placeholder="Optional" />
+                                  </div>
+                                </div>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      );
+                    })()}
+                  </>
+                )}
+
+                {activeTab === 'documents' && (
+                  <DocumentsUploadForm isEditing={isEditing} />
+                )}
+              </main>
             </div>
-            {/* Tab navigation for profile sections */}
-            <div className="mb-8">
-              <NavigationSidebar activeTab={activeTab} onTabChange={setActiveTab} />
-            </div>
-            {activeTab === 'skills' && (
-              <>
-                <PersonalDetailsForm 
-                  profile={profile}
-                  onProfileChange={handleProfileChange}
-                  isEditing={isEditing}
-                />
-                <AddressDetailsForm 
-                  profile={profile}
-                  onProfileChange={handleProfileChange}
-                  isEditing={isEditing}
-                />
-                <SkillsDetailsForm 
-                  profile={profile}
-                  onProfileChange={handleProfileChange}
-                  isEditing={isEditing}
-                />
-              </>
-            )}
-            {activeTab === 'contact' && (
-              <ContactDetailsForm 
-                profile={profile}
-                onProfileChange={handleProfileChange}
-                isEditing={isEditing}
-              />
-            )}
-            {activeTab === 'family' && (
-              <FamilyDetailsForm 
-                profile={profile}
-                onProfileChange={handleProfileChange}
-                isEditing={isEditing}
-              />
-            )}
-            {activeTab === 'documents' && (
-              <DocumentsUploadForm isEditing={isEditing} />
-            )}
           </div>
         </div>
       </div>
