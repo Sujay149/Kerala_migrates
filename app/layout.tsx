@@ -40,8 +40,8 @@ export const metadata: Metadata = {
     'healthcare automation'
   ],
   authors: [{ name: 'Sujay Babu Thota', url: 'https://safeentry.app' }],
-  creator: 'Asvix - Sujay Babu Thota',
-  publisher: 'Asvix',
+  creator: 'Kerala Governamnet - Sujay Babu Thota',
+  publisher: 'Kerala Governamnet',
   robots: {
     index: true,
     follow: true,

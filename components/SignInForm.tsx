@@ -35,7 +35,7 @@ export default function SignInForm() {
       }
 
       toast.success("Signed in successfully")
-      router.push("/dashboard")
+      router.push("/migrant-profile")
     } catch (err: any) {
       toast.error(firebaseErrorMessage(err.code, err.message))
     } finally {

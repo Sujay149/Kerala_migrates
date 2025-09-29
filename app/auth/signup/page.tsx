@@ -69,7 +69,7 @@ export default function SignUpPage() {
     try {
       await signInWithGoogle()
       toast.success("Account created with Google successfully!")
-      router.push("/profile-setup")
+      router.push("/migrant-profile")
     } catch (error: any) {
       toast.error(error.message || "Failed to sign up with Google")
     } finally {
@@ -82,7 +82,7 @@ export default function SignUpPage() {
     try {
       await signInWithFacebook()
       toast.success("Account created with Facebook successfully!")
-      router.push("/profile-setup")
+      router.push("/migrant-profile")
     } catch (error: any) {
       toast.error(error.message || "Failed to sign up with Facebook")
     } finally {

@@ -55,7 +55,7 @@ export default function SignInPage() {
       
       if (isAdminEmail(email)) {
         const adminRole = getAdminRole(email)
-        const dashboardRoute = adminRole ? getAdminDashboardRoute(adminRole) : '/dashboard'
+        const dashboardRoute = adminRole ? getAdminDashboardRoute(adminRole) : '/migrant-profile'
         
         toast.success("Admin login successful!", {
           position: "top-center"
@@ -65,7 +65,7 @@ export default function SignInPage() {
         toast.success("Signed in successfully!", {
           position: "top-center"
         })
-        router.push("/dashboard")
+        router.push("/migrant-profile")
       }
     } catch (error: any) {
       // Check if it's an email verification error
@@ -95,7 +95,7 @@ export default function SignInPage() {
       toast.success("Signed in with Google successfully!", {
         position: "top-center"
       })
-      router.push("/dashboard")
+      router.push("/migrant-profile")
     } catch (error: any) {
       toast.error(error.message || "Failed to sign in with Google", {
         position: "top-center"
@@ -112,7 +112,7 @@ export default function SignInPage() {
       toast.success("Signed in with Facebook successfully!", {
         position: "top-center"
       })
-      router.push("/dashboard")
+      router.push("/migrant-profile")
     } catch (error: any) {
       toast.error(error.message || "Failed to sign in with Facebook", {
         position: "top-center"

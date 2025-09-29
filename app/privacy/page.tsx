@@ -59,7 +59,7 @@ export default function PrivacyPage() {
             </CardHeader>
             <CardContent>
               <p className="text-[#546e7a]">
-                This Privacy Policy describes how Asvix and its affiliates (“we”, “us”, “our”) collect, use, share, and protect your personal data through the platform https://medibot-ai.com (“Platform”). By using our services, you agree to the terms of this policy and the laws of India.
+                This Privacy Policy describes how Kerala Governamnet and its affiliates (“we”, “us”, “our”) collect, use, share, and protect your personal data through the platform https://medibot-ai.com (“Platform”). By using our services, you agree to the terms of this policy and the laws of India.
               </p>
             </CardContent>
           </Card>

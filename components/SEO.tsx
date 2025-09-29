@@ -72,7 +72,7 @@ export default function SEO({
       
       {/* Additional meta tags */}
       <meta name="author" content="Sujay Babu Thota" />
-      <meta name="publisher" content="Asvix" />
+      <meta name="publisher" content="Kerala Governamnet" />
       <meta name="language" content="English" />
       <meta name="revisit-after" content="7 days" />
       <meta name="distribution" content="global" />
@@ -94,7 +94,7 @@ export default function SEO({
             },
             "publisher": {
               "@type": "Organization",
-              "name": "Asvix",
+              "name": "Kerala Governamnet",
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://safeentry.app/kerala-digital-health-logo.svg"

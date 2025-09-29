@@ -113,6 +113,8 @@ function SidebarComponent({ isOpen = false, onClose }: SidebarProps) {
   }, []);
 
   const menuItems = useMemo(() => [
+    
+    { icon: User, label: "Migrant Profile", href: "/migrant-profile" },
     { icon: Home, label: "Dashboard", href: "/dashboard" },
     { icon: Upload, label: "Upload Documents", href: "/documents" },
     { icon: QrCode, label: "My QR Code", href: "/qr-codes" },
