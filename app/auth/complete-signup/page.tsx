@@ -80,7 +80,7 @@ export default function CompleteSignupPage() {
   sessionStorage.removeItem('signup_remember')
 
   toast.success('Account created and verified. Redirecting...')
-  router.push('/dashboard')
+  router.push('/migrant-profile')
     } catch (err: any) {
       console.error('complete-signup error', err)
       toast.error(err.message || 'Failed to complete signup')

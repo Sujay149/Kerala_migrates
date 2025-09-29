@@ -84,7 +84,7 @@ export default function ProfileSetupPage() {
       await createUserProfile(user.uid, user.email!, formData.fullName, user.photoURL || "", profileData)
 
       toast.success("Profile setup completed successfully!")
-      router.push("/dashboard")
+      router.push("/migrant-profile")
     } catch (error) {
       console.error("Error setting up profile:", error)
       toast.error("Failed to setup profile. Please try again.")
@@ -94,7 +94,7 @@ export default function ProfileSetupPage() {
   }
 
   const handleSkip = () => {
-    router.push("/dashboard")
+    router.push("/migrant-profile")
   }
 
   return (

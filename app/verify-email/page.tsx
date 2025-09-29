@@ -28,7 +28,7 @@ export default function VerifyEmailPage() {
           setVerificationStatus('verified')
           toast.success("Email verified successfully!")
           setTimeout(() => {
-            router.push('/dashboard')
+            router.push('/migrant-profile')
           }, 2000)
         }
       }
@@ -72,7 +72,7 @@ export default function VerifyEmailPage() {
         setVerificationStatus('verified')
         toast.success("Email verified successfully!")
         setTimeout(() => {
-          router.push('/dashboard')
+          router.push('/migrant-profile')
         }, 2000)
       } else {
         toast.info("Email not verified yet. Please check your inbox and click the verification link.")
@@ -99,7 +99,7 @@ export default function VerifyEmailPage() {
             </div>
             <CardTitle className="text-green-600">Email Verified!</CardTitle>
             <CardDescription>
-              Your email has been successfully verified. Redirecting to dashboard...
+              Your email has been successfully verified. Redirecting to migrant profile...
             </CardDescription>
           </CardHeader>
         </Card>
