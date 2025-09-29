@@ -21,7 +21,7 @@ const db = getFirestore();
 
 async function sendPush(token, title, body) {
   try {
-    const response = await fetch('http://medibot-ai.com/api/send-push', {
+    const response = await fetch('http://MigrantBot-ai.com/api/send-push', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ token, title, body }),

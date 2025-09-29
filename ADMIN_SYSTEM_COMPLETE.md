@@ -6,7 +6,7 @@ The admin access system has been successfully implemented with separate authenti
 ## Admin Credentials
 
 ### Government Access
-- **Email**: `kerala.health@medibot.admin`
+- **Email**: `kerala.health@MigrantBot.admin`
 - **Password**: `Kerala@2024!Health`
 - **Dashboard**: `/admin/government`
 - **Permissions**: View all users, health stats, export reports, manage health centers, system analytics
@@ -14,17 +14,17 @@ The admin access system has been successfully implemented with separate authenti
 ### Health Center Access (Examples)
 
 #### KIMS Hospital - Trivandrum
-- **Email**: `kims.hospital@medibot.admin`
+- **Email**: `kims.hospital@MigrantBot.admin`
 - **Password**: `KIMS@2024!Medical`
 - **Dashboard**: `/admin/health-center`
 
 #### Apollo Hospital - Chennai
-- **Email**: `apollo.hospital@medibot.admin`
+- **Email**: `apollo.hospital@MigrantBot.admin`
 - **Password**: `Apollo@2024!Health`
 - **Dashboard**: `/admin/health-center`
 
 #### AIIMS - New Delhi
-- **Email**: `aiims.delhi@medibot.admin`
+- **Email**: `aiims.delhi@MigrantBot.admin`
 - **Password**: `AIIMS@2024!Delhi`
 - **Dashboard**: `/admin/health-center`
 

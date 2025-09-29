@@ -149,7 +149,7 @@ export default function PricingPage() {
 
       <div className="max-w-4xl mx-auto text-center mb-12">
         <h1 className="text-4xl font-bold mb-4 text-blue-700 dark:text-blue-300">Upgrade to Premium</h1>
-        <p className="text-lg text-gray-600 dark:text-gray-400">Unlock advanced features and get the most out of MediBot. Choose the plan that fits you best.</p>
+        <p className="text-lg text-gray-600 dark:text-gray-400">Unlock advanced features and get the most out of MigrantBot. Choose the plan that fits you best.</p>
       </div>
       
       <div className="flex flex-col md:flex-row gap-8 justify-center items-stretch">

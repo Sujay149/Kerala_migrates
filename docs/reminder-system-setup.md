@@ -1,7 +1,7 @@
-# MediBot Reminder System Setup
+# MigrantBot Reminder System Setup
 
 ## Overview
-The MediBot reminder system now supports reliable daily medication reminders through a combination of server-side scheduling and external cron job triggers.
+The MigrantBot reminder system now supports reliable daily medication reminders through a combination of server-side scheduling and external cron job triggers.
 
 ## Architecture
 
@@ -118,7 +118,7 @@ Required in `.env.local`:
 FIREBASE_PROJECT_ID=your-project-id
 FIREBASE_CLIENT_EMAIL=your-service-account-email
 FIREBASE_PRIVATE_KEY=your-private-key
-CRON_SECRET=medibot-cron-2024
+CRON_SECRET=MigrantBot-cron-2024
 NEXT_PUBLIC_APP_URL=https://yourdomain.com
 ```
 

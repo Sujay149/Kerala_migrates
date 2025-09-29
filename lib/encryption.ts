@@ -2,7 +2,7 @@
 // This provides stronger encryption than the basic version
 
 const ConfigEncryption = {
-  KEY: "MediBot2025SecureKey!@#",
+  KEY: "MigrantBot2025SecureKey!@#",
   
   // XOR-based encryption with key
   encrypt(text: string): string {

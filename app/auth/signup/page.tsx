@@ -139,7 +139,7 @@ export default function SignUpPage() {
                   className="rounded-full border-2 border-border"
                 />
               </div>
-              <span className="text-foreground font-bold text-xl">MediBot Kerala</span>
+              <span className="text-foreground font-bold text-xl">MigrantBot Kerala</span>
             </div>
             <h1 className="text-2xl font-bold text-foreground mb-1">Create Account</h1>
             <p className="text-muted-foreground text-sm">Join thousands improving their health with AI</p>

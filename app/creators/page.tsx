@@ -19,7 +19,7 @@ export default function CreatorsPage() {
       name: creatorName,
       role: "Lead Developer & Founder",
       avatar: "/kerala-digital-health-logo.svg", // Using the Government of Kerala Digital Health Record logo
-      bio: "Full-stack developer passionate about healthcare technology and AI. Creator of MediBot, dedicated to making healthcare more accessible through innovative technology solutions.",
+      bio: "Full-stack developer passionate about healthcare technology and AI. Creator of MigrantBot, dedicated to making healthcare more accessible through innovative technology solutions.",
       contributions: [
         "AI Chat System Architecture",
         "Medication Reminder Engine", 
@@ -77,12 +77,12 @@ export default function CreatorsPage() {
             <div className="flex items-center space-x-3">
               <Image
                 src="/kerala-digital-health-logo.svg"
-                alt="MediBot Logo"
+                alt="MigrantBot Logo"
                 width={32}
                 height={32}
                 className="rounded-full"
               />
-              <span className="font-bold text-xl text-[#0E7490]">MediBot</span>
+              <span className="font-bold text-xl text-[#0E7490]">MigrantBot</span>
             </div>
           </div>
         </div>
@@ -104,7 +104,7 @@ export default function CreatorsPage() {
               </span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              The passionate developers behind MediBot, working tirelessly to revolutionize healthcare 
+              The passionate developers behind MigrantBot, working tirelessly to revolutionize healthcare 
               through innovative AI technology and user-centered design.
             </p>
           </motion.div>
@@ -308,7 +308,7 @@ export default function CreatorsPage() {
               Get in Touch
             </h2>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Have questions about MediBot? Want to collaborate or contribute? 
+              Have questions about MigrantBot? Want to collaborate or contribute? 
               We'd love to hear from you!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -330,7 +330,7 @@ export default function CreatorsPage() {
               >
                 <Link href="/chat">
                   <Heart className="mr-2 h-5 w-5" />
-                  Try MediBot
+                  Try MigrantBot
                 </Link>
               </Button>
             </div>

@@ -17,7 +17,7 @@
 #### 1.1 Create Project
 1. Go to [Firebase Console](https://console.firebase.google.com/)
 2. Click "Create a project"
-3. Project name: `medibot-v2` (or your preferred name)
+3. Project name: `MigrantBot-v2` (or your preferred name)
 4. Enable Google Analytics: **Yes**
 5. Choose or create Analytics account
 6. Click "Create project"
@@ -57,8 +57,8 @@
 2. Add these domains:
    - `localhost`
    - `localhost:3000`
-   - `medibot-ai.com`
-   - `www.medibot-ai.com`
+   - `MigrantBot-ai.com`
+   - `www.MigrantBot-ai.com`
 
 #### 2.2 OAuth Configuration
 **Google Sign-In:**
@@ -115,7 +115,7 @@ service cloud.firestore {
 #### 4.1 Web App Configuration
 1. Project Settings → General → Your apps
 2. Click "Add app" → Web app
-3. App nickname: `MediBot Web`
+3. App nickname: `MigrantBot Web`
 4. Enable Firebase Hosting: **No** (unless needed)
 5. Copy the config object
 

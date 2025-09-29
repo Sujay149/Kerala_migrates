@@ -50,12 +50,12 @@ export async function POST(req: Request) {
     }
 
     await transporter.sendMail({
-      from: `"MediBot Feedback" <${emailUser}>`,
+      from: `"MigrantBot Feedback" <${emailUser}>`,
       to: "sujayss149@gmail.com", 
-      subject: "New Feedback from MediBot User",
+      subject: "New Feedback from MigrantBot User",
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-          <h2>MediBot Feedback</h2>
+          <h2>MigrantBot Feedback</h2>
           <p><strong>From:</strong> ${email || "Anonymous"}</p>
           <p><strong>Rating:</strong> ${rating || 0}/5</p>
           <p><strong>Message:</strong></p>

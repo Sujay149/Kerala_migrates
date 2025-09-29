@@ -19,7 +19,7 @@ export default function SignInPage() {
   const [loading, setLoading] = useState(false)
   const [rememberMe, setRememberMe] = useState(() => {
     try {
-      return localStorage.getItem('medibot_remember') === 'true'
+      return localStorage.getItem('MigrantBot_remember') === 'true'
     } catch {
       return false
     }
@@ -48,7 +48,7 @@ export default function SignInPage() {
     try {
       await signIn(email, password, rememberMe)
       // persist remember choice
-      try { localStorage.setItem('medibot_remember', rememberMe ? 'true' : 'false') } catch {}
+      try { localStorage.setItem('MigrantBot_remember', rememberMe ? 'true' : 'false') } catch {}
       
       // Check if this is an admin login and redirect accordingly
       const { isAdminEmail, getAdminRole, getAdminDashboardRoute } = await import('@/lib/admin-config')
@@ -175,7 +175,7 @@ export default function SignInPage() {
                 />
               </div>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/70 font-bold text-2xl tracking-tight">
-                Medibot
+                MigrantBot
               </span>
             </div>
 

@@ -46,7 +46,7 @@ export interface DocumentSubmission {
 }
 
 export class DocumentSubmissionManager {
-  private static readonly ENCRYPTION_KEY = process.env.NEXT_PUBLIC_QR_ENCRYPTION_KEY || 'medibot-default-key-32-characters';
+  private static readonly ENCRYPTION_KEY = process.env.NEXT_PUBLIC_QR_ENCRYPTION_KEY || 'MigrantBot-default-key-32-characters';
   private static readonly BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
 
   /**

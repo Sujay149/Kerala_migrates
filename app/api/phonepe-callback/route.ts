@@ -38,7 +38,7 @@ export async function GET(req: NextRequest) {
     
     console.log("[PhonePe Callback] GET params:", { merchantTransactionId, planName, userId, code, transactionId });
 
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://medibot-ai.com";
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://MigrantBot-ai.com";
     
     if (!merchantTransactionId) {
       return NextResponse.redirect(`${baseUrl}/pricing?status=failed&message=Missing transaction ID`);
@@ -92,7 +92,7 @@ export async function GET(req: NextRequest) {
 
   } catch (error: any) {
     console.error("[PhonePe Callback] Error:", error);
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://medibot-ai.com";
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://MigrantBot-ai.com";
     return NextResponse.redirect(`${baseUrl}/pricing?status=failed&message=Payment processing error`);
   }
 }

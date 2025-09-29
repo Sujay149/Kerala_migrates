@@ -59,7 +59,7 @@ export default function PrivacyPage() {
             </CardHeader>
             <CardContent>
               <p className="text-[#546e7a]">
-                This Privacy Policy describes how Kerala Governamnet and its affiliates (“we”, “us”, “our”) collect, use, share, and protect your personal data through the platform https://medibot-ai.com (“Platform”). By using our services, you agree to the terms of this policy and the laws of India.
+                This Privacy Policy describes how Kerala Governamnet and its affiliates (“we”, “us”, “our”) collect, use, share, and protect your personal data through the platform https://MigrantBot-ai.com (“Platform”). By using our services, you agree to the terms of this policy and the laws of India.
               </p>
             </CardContent>
           </Card>
@@ -153,7 +153,7 @@ export default function PrivacyPage() {
         <motion.div variants={item} className="pt-6 text-center">
           <div className="flex items-center justify-center mb-6">
             <Mail className="h-5 w-5 text-[#4dd0e1] mr-2" />
-            <p className="text-[#546e7a]">Questions? Contact us at privacy@medibot.com</p>
+            <p className="text-[#546e7a]">Questions? Contact us at privacy@MigrantBot.com</p>
           </div>
           <InstantLoadingLink href="/terms">
             <Button className={`${buttonClasses} mr-4`}>View Terms</Button>

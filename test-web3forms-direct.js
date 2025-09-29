@@ -6,9 +6,9 @@ const testWeb3FormsDirect = async () => {
   const testPayload = {
     access_key: ACCESS_KEY,
     to: "sujayss149@gmail.com", // Using a real email address for testing
-    from: "MediBot Kerala Digital Health <noreply@medibot-kerala.gov.in>",
+    from: "MigrantBot Kerala Digital Health <noreply@MigrantBot-kerala.gov.in>",
     subject: "Direct Test - Medication Reminder",
-    message: `Kerala Digital Health - MediBot
+    message: `Kerala Digital Health - MigrantBot
 💊 Medication Reminder
 
 Hello John Doe,
@@ -26,9 +26,9 @@ Important Reminders:
 • Take your medication at the prescribed time
 • Follow the dosage instructions carefully
 • Contact your healthcare provider if you have concerns
-• Keep track of your medication schedule in the MediBot app
+• Keep track of your medication schedule in the MigrantBot app
 
-This message was sent by Kerala Digital Health - MediBot
+This message was sent by Kerala Digital Health - MigrantBot
 🏥 Government of Kerala Digital Health Initiative`
   };
 

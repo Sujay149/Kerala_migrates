@@ -7,9 +7,9 @@
 2. **lib/firebase.ts** - Updated Firebase configuration with new project details
 
 ### 🔧 Updated Configuration:
-- **Project ID**: `medibot-457514` → `sih-kerala`
+- **Project ID**: `MigrantBot-457514` → `sih-kerala`
 - **API Key**: Updated to your new key
-- **Auth Domain**: `medibot-457514.firebaseapp.com` → `sih-kerala.firebaseapp.com` 
+- **Auth Domain**: `MigrantBot-457514.firebaseapp.com` → `sih-kerala.firebaseapp.com` 
 - **Storage Bucket**: Updated to `sih-kerala.firebasestorage.app`
 - **App ID**: Updated to your new app ID
 - **Added**: Database URL and Measurement ID from your config
@@ -109,4 +109,4 @@ Make sure these are enabled in your Firebase console:
 ---
 
 ## 🎯 Expected Result:
-After completing these steps, your app should connect to the `sih-kerala` Firebase project instead of the old `medibot-457514` project, resolving all permission and authentication issues!
+After completing these steps, your app should connect to the `sih-kerala` Firebase project instead of the old `MigrantBot-457514` project, resolving all permission and authentication issues!

@@ -12,7 +12,7 @@ if (!admin.apps.length) {
       
     admin.initializeApp({
       credential: admin.credential.cert(serviceAccount),
-      databaseURL: "https://medibot-aead4-default-rtdb.firebaseio.com/"
+      databaseURL: "https://MigrantBot-aead4-default-rtdb.firebaseio.com/"
     });
   } catch (error) {
     console.error('Firebase Admin initialization failed:', error.message);
@@ -20,7 +20,7 @@ if (!admin.apps.length) {
     
     // Fallback initialization (for local development)
     admin.initializeApp({
-      databaseURL: "https://medibot-aead4-default-rtdb.firebaseio.com/"
+      databaseURL: "https://MigrantBot-aead4-default-rtdb.firebaseio.com/"
     });
   }
 }

@@ -30,7 +30,7 @@ export async function GET(req: Request) {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${process.env.CRON_SECRET || 'medibot-cron-2024'}`
+            'Authorization': `Bearer ${process.env.CRON_SECRET || 'MigrantBot-cron-2024'}`
           },
         });
         result = await cronResponse.json();

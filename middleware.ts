@@ -23,9 +23,6 @@ export function middleware(request: NextRequest) {
   const validRoutes = [
     '/',
     '/chat',
-    '/pricing',
-    '/premium',
-    '/premium-features',
     '/appointments',
     '/auth/signin',
     '/auth/signup',

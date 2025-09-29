@@ -36,7 +36,7 @@ export const ADMIN_CREDENTIALS: AdminCredentials[] = [
   },
   // Government Access
   {
-    email: 'kerala.govt@medibot.admin',
+    email: 'kerala.govt@MigrantBot.admin',
     password: 'KeralGov@2024!Secure',
     role: 'government',
     organizationName: 'Government of Kerala - Health Department',
@@ -49,7 +49,7 @@ export const ADMIN_CREDENTIALS: AdminCredentials[] = [
     ]
   },
   {
-    email: 'tamilnadu.govt@medibot.admin',
+    email: 'tamilnadu.govt@MigrantBot.admin',
     password: 'TNGov@2024!Health',
     role: 'government',
     organizationName: 'Government of Tamil Nadu - Health Department',
@@ -63,7 +63,7 @@ export const ADMIN_CREDENTIALS: AdminCredentials[] = [
   },
   // Health Center Access
   {
-    email: 'kims.hospital@medibot.admin',
+    email: 'kims.hospital@MigrantBot.admin',
     password: 'KIMS@2024!Medical',
     role: 'health_center',
     organizationName: 'KIMS Hospital - Trivandrum',
@@ -75,7 +75,7 @@ export const ADMIN_CREDENTIALS: AdminCredentials[] = [
     ]
   },
   {
-    email: 'apollo.hospital@medibot.admin',
+    email: 'apollo.hospital@MigrantBot.admin',
     password: 'Apollo@2024!Health',
     role: 'health_center',
     organizationName: 'Apollo Hospital - Chennai',
@@ -87,7 +87,7 @@ export const ADMIN_CREDENTIALS: AdminCredentials[] = [
     ]
   },
   {
-    email: 'aiims.delhi@medibot.admin',
+    email: 'aiims.delhi@MigrantBot.admin',
     password: 'AIIMS@2024!Delhi',
     role: 'health_center',
     organizationName: 'AIIMS - New Delhi',

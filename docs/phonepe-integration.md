@@ -1,4 +1,4 @@
-# PhonePe Payment Integration for MediBot
+# PhonePe Payment Integration for MigrantBot
 
 This document explains the updated PhonePe payment integration using the official PhonePe PG SDK Node.js library.
 
@@ -56,7 +56,7 @@ Initiates a payment with PhonePe.
   "success": true,
   "data": {
     "redirectUrl": "https://phonepe.com/payment/...",
-    "merchantTransactionId": "MEDIBOT-PREMIUM-xxx"
+    "merchantTransactionId": "MigrantBot-PREMIUM-xxx"
   },
   "message": "Payment initiated successfully"
 }
@@ -80,7 +80,7 @@ Checks payment status with PhonePe.
 **POST Request Body:**
 ```json
 {
-  "transactionId": "MEDIBOT-PREMIUM-xxx"
+  "transactionId": "MigrantBot-PREMIUM-xxx"
 }
 ```
 

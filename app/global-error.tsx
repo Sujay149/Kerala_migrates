@@ -28,7 +28,7 @@ export default function GlobalError({ error, reset }: ErrorProps) {
             </h1>
             
             <p className="text-lg text-gray-600 dark:text-gray-400 mb-2">
-              MediBot encountered an unexpected error.
+              MigrantBot encountered an unexpected error.
             </p>
             
             <p className="text-base text-gray-500 dark:text-gray-500 mb-8">

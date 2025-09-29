@@ -38,10 +38,10 @@ export default function ContactPage() {
       {/* Header */}
       <header className="pt-12 pb-8 px-4 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
-          Contact MediBot
+          Contact MigrantBot
         </h1>
         <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-          Have questions or need help? Reach out to the MediBot team using the form below or contact us directly.
+          Have questions or need help? Reach out to the MigrantBot team using the form below or contact us directly.
         </p>
       </header>
 
@@ -201,7 +201,7 @@ export default function ContactPage() {
       </main>
 
       <footer className="text-center py-8 text-gray-500 text-sm">
-        <p>© {new Date().getFullYear()} MediBot AI. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} MigrantBot AI. All rights reserved.</p>
       </footer>
     </div>
   );

@@ -121,7 +121,7 @@ export default function CollaborationsPage() {
           name: "Dr. Saikat Gochhait (Honoris Causa)",
           type: "Healthcare Research & Clinical Partner",
           location: "India",
-          description: "Strategic collaboration with Dr. Saikat Gochhait, a distinguished healthcare professional and researcher, to integrate evidence-based medical practices with MediBot's AI-powered health management system. This partnership focuses on enhancing clinical decision support and improving patient care outcomes through innovative digital health solutions.",
+          description: "Strategic collaboration with Dr. Saikat Gochhait, a distinguished healthcare professional and researcher, to integrate evidence-based medical practices with MigrantBot's AI-powered health management system. This partnership focuses on enhancing clinical decision support and improving patient care outcomes through innovative digital health solutions.",
           impact: isLoading ? "Loading patients data..." : `${userCount}+ patients reached through collaborative initiatives`,
           status: "Active",
           logo: "/logo.png",
@@ -169,7 +169,7 @@ export default function CollaborationsPage() {
             <div className="flex items-center space-x-3">
               <Image
                 src="/logo.png"
-                alt="MediBot Logo"
+                alt="MigrantBot Logo"
                 width={32}
                 height={32}
                 className="rounded-full"
@@ -647,7 +647,7 @@ export default function CollaborationsPage() {
               >
                 Why Partner with{" "}
                 <span className="bg-gradient-to-r from-[#4caf50] to-[#00acc1] bg-clip-text text-transparent">
-                  MediBot?
+                  MigrantBot?
                 </span>
               </motion.h2>
               <motion.p 
@@ -762,15 +762,15 @@ export default function CollaborationsPage() {
           <div className="flex items-center justify-center space-x-3 mb-4">
             <Image
               src="/logo.png"
-              alt="MediBot Logo"
+              alt="MigrantBot Logo"
               width={32}
               height={32}
               className="rounded-full"
             />
-            <span className="text-xl font-bold text-[#00796b]">MediBot</span>
+            <span className="text-xl font-bold text-[#00796b]">MigrantBot</span>
           </div>
           <p className="text-[#546e7a]">
-            © {new Date().getFullYear()} MediBot by Kerala Health Safety. All rights reserved. | In collaboration with Dr. Saikat Gochhait
+            © {new Date().getFullYear()} MigrantBot by Kerala Health Safety. All rights reserved. | In collaboration with Dr. Saikat Gochhait
           </p>
         </div>
       </footer>

@@ -433,7 +433,7 @@ CONVERSATION PATTERNS:
       }
       const formData = new FormData();
       formData.append("file", file);
-      formData.append("upload_preset", "medibot_Uploads");
+      formData.append("upload_preset", "MigrantBot_Uploads");
       const response = await fetch(
         `https://api.cloudinary.com/v1_1/${cloudName}/${file.type === "application/pdf" ? "raw" : "image"}/upload`,
         {
@@ -770,7 +770,7 @@ CONVERSATION PATTERNS:
 
   const sendMessageNotification = (userMessage: string, botResponse: string) => {
     if ("Notification" in window && Notification.permission === "granted") {
-      new Notification("MediBot Response", {
+      new Notification("MigrantBot Response", {
         body: "Your message has been answered",
         icon: "/kerala-digital-health-logo.svg",
         badge: "/kerala-digital-health-logo.svg",
@@ -795,7 +795,7 @@ CONVERSATION PATTERNS:
           model: "gpt-4o",
           key: process.env.NEXT_PUBLIC_OPENAI_API_KEY || "",
         },
-        "medibot": {
+        "MigrantBot": {
           api: "groq",
           model: "llama-3.3-70b-versatile",
           key: process.env.NEXT_PUBLIC_GROQ_API_KEY || "",
@@ -813,7 +813,7 @@ CONVERSATION PATTERNS:
         .map((msg) => `User: ${msg.message}\nAI: ${msg.response}`)
         .join("\n\n") || "";
 
-      const enhancedPrompt = `You are MediBot, a health-focused AI assistant developed by Sujay Babu Thota from MediBot. You provide personalized, contextual responses based on the user's conversation history and patterns.
+      const enhancedPrompt = `You are MigrantBot, a health-focused AI assistant developed by Sujay Babu Thota from MigrantBot. You provide personalized, contextual responses based on the user's conversation history and patterns.
 
 ${userContext}
 
@@ -821,7 +821,7 @@ CURRENT SESSION CONTEXT:
 ${currentSessionContext}
 
 CORE IDENTITY:
-- You are MediBot, created by Sujay Babu Thota from MediBot
+- You are MigrantBot, created by Sujay Babu Thota from MigrantBot
 - You have access to user's conversation history and can reference it naturally
 - You provide personalized health guidance based on their patterns and interests
 - You remember previous interactions and build upon them
@@ -845,8 +845,8 @@ RESPONSE GUIDELINES:
 - Act as if you naturally remember and learn from their previous conversations
 
 DEVELOPER INFORMATION:
-- If asked who developed you, respond: "I was developed by Sujay Babu Thota from MediBot"
-- If asked about your creator, mention Sujay Babu Thota and MediBot team
+- If asked who developed you, respond: "I was developed by Sujay Babu Thota from MigrantBot"
+- If asked about your creator, mention Sujay Babu Thota and MigrantBot team
 
 CURRENT QUERY: ${userMessage}
 
@@ -948,9 +948,9 @@ Provide a personalized, contextual response that acknowledges their history whil
         return "";
       }
       console.error(`Error generating ${selectedModel} response:`, error);
-      if (selectedModel !== "medibot") {
-        toast.warning("Primary model failed, falling back to MediBot model...");
-        return generateAIResponse(userMessage, "medibot", messageId);
+      if (selectedModel !== "MigrantBot") {
+        toast.warning("Primary model failed, falling back to MigrantBot model...");
+        return generateAIResponse(userMessage, "MigrantBot", messageId);
       }
       return "I'm sorry, I couldn't process your request. Please try again or consult a healthcare professional.";
     }
@@ -1436,7 +1436,7 @@ Provide a personalized, contextual response that acknowledges their history whil
           ) : (
             <>
               <Crown className="h-3 w-3 sm:h-4 sm:w-4 text-gray-400" />
-              <span className="hidden sm:inline text-xs">Medibot</span>
+              <span className="hidden sm:inline text-xs">MigrantBot</span>
             </>
           )}
         </div>
@@ -1470,7 +1470,7 @@ Provide a personalized, contextual response that acknowledges their history whil
 
     {/* Brand Title - hidden on small screens */}
     <h1 className="hidden sm:block text-base sm:text-lg md:text-xl font-bold text-gray-800 dark:text-white ml-1 sm:ml-2">
-      <span className="bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">MediBot</span>
+      <span className="bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">MigrantBot</span>
       <span className="text-gray-600 dark:text-gray-300"> – Your Health Assistant</span>
     </h1>
   </div>
@@ -1624,7 +1624,7 @@ Provide a personalized, contextual response that acknowledges their history whil
             <SelectContent className="bg-gray-100 dark:bg-gray-800 dark:text-white text-sm border-gray-200 dark:border-gray-700">
               <SelectItem value="gemini-2.0-flash">Gemini 2.0 Flash</SelectItem>
               <SelectItem value="gpt-4o">GPT-4o</SelectItem>
-              <SelectItem value="medibot">MediBot</SelectItem>
+              <SelectItem value="MigrantBot">MigrantBot</SelectItem>
             </SelectContent>
           </Select>
           <Button
@@ -1688,7 +1688,7 @@ Provide a personalized, contextual response that acknowledges their history whil
     </div>
   </div>
   <p className="mt-1 text-center text-sm text-gray-500 font-sans">
-  MediBot can make mistakes. Check important info.
+  MigrantBot can make mistakes. Check important info.
 </p>
 </div>
           )}

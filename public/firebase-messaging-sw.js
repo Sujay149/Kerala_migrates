@@ -3,8 +3,8 @@ importScripts('https://www.gstatic.com/firebasejs/10.0.0/firebase-messaging-comp
 
 firebase.initializeApp({
   apiKey: "AIzaSyAB5TldoIqRS_WfUlF7JYfVnzXi3i96dmw",
-  authDomain: "medibot-457514.firebaseapp.com",
-  projectId: "medibot-457514",
+  authDomain: "MigrantBot-457514.firebaseapp.com",
+  projectId: "MigrantBot-457514",
   messagingSenderId: "806828516267",
   appId: "1:806828516267:web:a75aad403f3dfbc67da8ee"
 });
@@ -15,7 +15,7 @@ const messaging = firebase.messaging();
 messaging.onBackgroundMessage(function(payload) {
   console.log('[firebase-messaging-sw.js] Background message received:', payload);
   
-  const notificationTitle = payload.notification?.title || payload.data?.title || 'MediBot Reminder';
+  const notificationTitle = payload.notification?.title || payload.data?.title || 'MigrantBot Reminder';
   const notificationBody = payload.notification?.body || payload.data?.body || 'You have a medication reminder';
   
   const notificationOptions = {

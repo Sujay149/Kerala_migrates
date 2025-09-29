@@ -47,7 +47,7 @@ export default function HomePage() {
   // Redirect remembered or authenticated users to migrant profile page
   useEffect(() => {
     try {
-      const remembered = typeof window !== 'undefined' && localStorage.getItem('medibot_remember') === 'true'
+      const remembered = typeof window !== 'undefined' && localStorage.getItem('MigrantBot_remember') === 'true'
       if (!loading && (user || remembered)) {
         router.push('/migrant-profile')
       }

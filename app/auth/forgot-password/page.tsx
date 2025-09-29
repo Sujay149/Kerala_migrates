@@ -51,7 +51,7 @@ export default function ForgotPasswordPage() {
             <div className="w-16 h-16 relative">
               <Image src="/kerala-digital-health-logo.svg" alt="Government of Kerala Digital Health Record Logo" width={64} height={64} className="rounded-full" />
             </div>
-            <span className="text-purple-400 font-semibold text-2xl">MediBot Kerala</span>
+            <span className="text-purple-400 font-semibold text-2xl">MigrantBot Kerala</span>
           </div>
 
           <h1 className="text-3xl font-bold text-white mb-3">Reset Password</h1>

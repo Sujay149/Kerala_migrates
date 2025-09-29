@@ -63,7 +63,7 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     console.log("[PhonePe] Incoming request body:", body);
     
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://medibot-ai.com";
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://MigrantBot-ai.com";
     const { amount, userId, planName } = body;
 
     // Validate required fields
@@ -88,7 +88,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const merchantTransactionId = `MEDIBOT-${planName.toUpperCase()}-${randomUUID()}`;
+    const merchantTransactionId = `MigrantBot-${planName.toUpperCase()}-${randomUUID()}`;
     const amountInPaise = amount * 100;
 
     // The URL the user will be redirected to after payment completion/failure

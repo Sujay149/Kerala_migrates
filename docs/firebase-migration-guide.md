@@ -5,7 +5,7 @@
 ### 1. Create New Firebase Project
 1. Go to https://console.firebase.google.com/
 2. Click "Add project" or "Create a project"
-3. Enter project name (e.g., "medibot-new" or "medibot-v2")
+3. Enter project name (e.g., "MigrantBot-new" or "MigrantBot-v2")
 4. Follow setup wizard
 
 ### 2. Enable Required Services

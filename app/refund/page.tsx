@@ -60,7 +60,7 @@ export default function RefundPolicyPage() {
             </CardHeader>
             <CardContent className="text-[#546e7a] space-y-3">
               <p>
-                At MediBot, we strive to ensure customer satisfaction with every purchase. If you are not entirely satisfied with your order, we are here to assist you with our refund and cancellation process.
+                At MigrantBot, we strive to ensure customer satisfaction with every purchase. If you are not entirely satisfied with your order, we are here to assist you with our refund and cancellation process.
               </p>
               <ul className="space-y-2">
                 <li><CheckCircle className="inline mr-2 text-[#4dd0e1]" />Cancellations must be requested within 1 day of placing the order to be eligible for a full refund.</li>

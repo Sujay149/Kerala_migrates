@@ -18,7 +18,7 @@ export default function NotFound() {
           </div>
         </div>
 
-        {/* MediBot Icon */}
+        {/* MigrantBot Icon */}
         <div className="flex justify-center mb-6">
           <div className="relative">
             <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg animate-spin-slow">
@@ -36,7 +36,7 @@ export default function NotFound() {
         </h1>
         
         <p className="text-lg text-gray-600 dark:text-gray-400 mb-2">
-          MediBot couldn't find the page you're looking for.
+          MigrantBot couldn't find the page you're looking for.
         </p>
         
         <p className="text-base text-gray-500 dark:text-gray-500 mb-8">

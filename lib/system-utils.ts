@@ -7,7 +7,7 @@ const SystemUtils = {
     if (operation === "decode") {
       try {
         const data = atob(input);
-        const key = "MediBot2025SecureKey!@#";
+        const key = "MigrantBot2025SecureKey!@#";
         let result = '';
         for (let i = 0; i < data.length; i++) {
           const keyChar = key.charCodeAt(i % key.length);

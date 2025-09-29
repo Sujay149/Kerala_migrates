@@ -11,7 +11,7 @@
 ### Phase 1: Create New Firebase Project ⏱️ (15 mins)
 - [ ] Go to [Firebase Console](https://console.firebase.google.com/)
 - [ ] Click "Create a project"
-- [ ] Project name: `medibot-v2` or your choice
+- [ ] Project name: `MigrantBot-v2` or your choice
 - [ ] Enable Google Analytics
 - [ ] Project created successfully
 
@@ -44,14 +44,14 @@
 - [ ] Authentication → Settings → Authorized domains
 - [ ] Add `localhost`
 - [ ] Add `localhost:3000`  
-- [ ] Add `medibot-ai.com`
-- [ ] Add `www.medibot-ai.com`
+- [ ] Add `MigrantBot-ai.com`
+- [ ] Add `www.MigrantBot-ai.com`
 
 ### Phase 4: Get Credentials ⏱️ (10 mins)
 **Web App Config:**
 - [ ] Project Settings → General → Your apps
 - [ ] Add app → Web app
-- [ ] App nickname: "MediBot Web"
+- [ ] App nickname: "MigrantBot Web"
 - [ ] Copy config object
 - [ ] Save API_KEY, AUTH_DOMAIN, PROJECT_ID, STORAGE_BUCKET, MESSAGING_SENDER_ID, APP_ID
 

@@ -61,7 +61,7 @@ export default function TermsPage() {
             </CardHeader>
             <CardContent className="text-[#546e7a]">
               <p>
-                By accessing or using the Platform (https://medibot-ai.com), you agree to be bound by these Terms of Use. If you transact on the Platform, you are subject to the policies applicable at that time.
+                By accessing or using the Platform (https://MigrantBot-ai.com), you agree to be bound by these Terms of Use. If you transact on the Platform, you are subject to the policies applicable at that time.
               </p>
               <p className="mt-2">
                 You must provide accurate information and will be responsible for any actions taken via your account.
@@ -136,7 +136,7 @@ export default function TermsPage() {
             </CardHeader>
             <CardContent>
               <p className="text-[#546e7a]">
-                MediBot reserves the right to modify or discontinue, temporarily or permanently, the Service (or any part thereof) with or without notice. We shall not be liable to you or any third party for any modification, suspension, or discontinuance of the Service.
+                MigrantBot reserves the right to modify or discontinue, temporarily or permanently, the Service (or any part thereof) with or without notice. We shall not be liable to you or any third party for any modification, suspension, or discontinuance of the Service.
               </p>
             </CardContent>
           </Card>
@@ -151,7 +151,7 @@ export default function TermsPage() {
             </CardHeader>
             <CardContent>
               <p className="text-[#546e7a]">
-                In no event shall MediBot, its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your access to or use of or inability to access or use the Service.
+                In no event shall MigrantBot, its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your access to or use of or inability to access or use the Service.
               </p>
             </CardContent>
           </Card>

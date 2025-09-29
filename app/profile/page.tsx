@@ -265,7 +265,7 @@ export default function ProfilePage() {
         setUploadingPhoto(true);
         const imageForm = new FormData();
         imageForm.append("file", selectedImageFile);
-        imageForm.append("upload_preset", "medibot_uploads");
+        imageForm.append("upload_preset", "MigrantBot_uploads");
 
         const res = await fetch("https://api.cloudinary.com/v1_1/dygmrde1v/image/upload", {
           method: "POST",
@@ -282,7 +282,7 @@ export default function ProfilePage() {
         setUploadingLogo(true);
         const logoForm = new FormData();
         logoForm.append("file", selectedLogoFile);
-        logoForm.append("upload_preset", "medibot_uploads");
+        logoForm.append("upload_preset", "MigrantBot_uploads");
 
         const logoRes = await fetch("https://api.cloudinary.com/v1_1/dygmrde1v/image/upload", {
           method: "POST",
@@ -322,14 +322,14 @@ export default function ProfilePage() {
     const exportData = {
       profile: userProfile,
       exportDate: new Date().toISOString(),
-      note: "This is your Medibot data export",
+      note: "This is your MigrantBot data export",
     };
 
     const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: "application/json" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = `Medibot-data-export-${new Date().toISOString().split("T")[0]}.json`;
+    a.download = `MigrantBot-data-export-${new Date().toISOString().split("T")[0]}.json`;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);

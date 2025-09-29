@@ -20,8 +20,8 @@
     </projectState>
   </component>
   <component name="GenerateSignedApkSettings">
-    <option name="KEY_STORE_PATH" value="C:\Users\sujay babu\Desktop\MEDIBOT_REM\keystore\medibot-key.jks" />
-    <option name="KEY_ALIAS" value="Medibot" />
+    <option name="KEY_STORE_PATH" value="C:\Users\sujay babu\Desktop\MigrantBot_REM\keystore\MigrantBot-key.jks" />
+    <option name="KEY_ALIAS" value="MigrantBot" />
     <option name="BUILD_TARGET_KEY" value="apk" />
   </component>
   <component name="Git.Settings">
@@ -38,7 +38,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ApkExportedModule": "android.app",
-    "ExportApk.ApkPathForandroid.app": "C:\\Users\\sujay babu\\Desktop\\MEDIBOT_REM\\android\\app",
+    "ExportApk.ApkPathForandroid.app": "C:\\Users\\sujay babu\\Desktop\\MigrantBot_REM\\android\\app",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.git.unshallow": "true",

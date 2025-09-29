@@ -6,7 +6,7 @@ export async function GET(req: Request) {
   try {
     // Verify this is called by a cron service (optional security check)
     const authHeader = req.headers.get('authorization');
-    const cronSecret = process.env.CRON_SECRET || 'medibot-cron-2024';
+    const cronSecret = process.env.CRON_SECRET || 'MigrantBot-cron-2024';
     
     if (authHeader !== `Bearer ${cronSecret}`) {
       console.log("❌ Unauthorized cron attempt");

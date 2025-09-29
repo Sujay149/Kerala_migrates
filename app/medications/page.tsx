@@ -97,7 +97,7 @@ export default function MedicationsPage() {
                 
                 // Show browser notification for foreground messages
                 if (Notification.permission === 'granted') {
-                  const title = payload.notification?.title || payload.data?.title || 'MediBot Reminder';
+                  const title = payload.notification?.title || payload.data?.title || 'MigrantBot Reminder';
                   const body = payload.notification?.body || payload.data?.body || 'You have a medication reminder';
                   
                   console.log('Showing foreground notification:', title, body);

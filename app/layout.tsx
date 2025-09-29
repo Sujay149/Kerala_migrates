@@ -196,7 +196,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               },
               "description": "AI-powered health assistant for medication management, prescription analysis, and personalized health insights",
               "downloadUrl": "https://safekerala.kerala.gov.in/safekerala.apk",
-              "screenshot": "https://medibot-ai.com/main.png"
+              "screenshot": "https://MigrantBot-ai.com/main.png"
             })
           }}
         />

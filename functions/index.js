@@ -27,7 +27,7 @@ exports.sendMedicationReminders = functions.pubsub.schedule("* * * * *").onRun(a
     // Send email reminder (reuse your existing email logic)
     if (email) {
       await resend.emails.send({
-        from: "MediBot <no-reply@your-domain.com>",
+        from: "MigrantBot <no-reply@your-domain.com>",
         to: [email],
         subject: "Medication Reminder",
         text: `Time to take your medicine: ${medicineName}`,
@@ -41,11 +41,11 @@ const admin = require("firebase-admin");
 const { Resend } = require("resend");
 const { v4: uuidv4 } = require("uuid");
 
-const serviceAccount = require("./medibot-457514-firebase-adminsdk-fbsvc-4a9a9554c2.json");
+const serviceAccount = require("./MigrantBot-457514-firebase-adminsdk-fbsvc-4a9a9554c2.json");
 
  admin.initializeApp({
    credential: admin.credential.cert(serviceAccount),
-   databaseURL: "https://medibot-457514.firebaseio.com"
+   databaseURL: "https://MigrantBot-457514.firebaseio.com"
  });
 
 const resend = new Resend(functions.config().resend.api_key);
@@ -91,30 +91,30 @@ exports.sendAppointmentConfirmationAndReview = functions.firestore
     const rejectToken = await generateAndStoreToken(appointmentId, "reject");
 
     // Base URL for HTTP functions (replace with your Firebase Functions URL)
-    const baseUrl = "https://us-central1-medibot-457514.cloudfunctions.net";
+    const baseUrl = "https://us-central1-MigrantBot-457514.cloudfunctions.net";
 
     // User confirmation email
     const userEmailData = {
-      from: "MediBot <no-reply@your-domain.com>", // Replace with your Resend-verified domain
+      from: "MigrantBot <no-reply@your-domain.com>", // Replace with your Resend-verified domain
       to: [userEmail],
       subject: "Your Appointment Request is Pending",
-      text: `Dear ${user.displayName || "User"},\n\nYour appointment with Dr. ${doctorName} at ${hospitalName} on ${date} at ${time} has been successfully submitted and is pending approval. You will receive another email once it is reviewed.\n\nBest regards,\nMediBot Team`,
+      text: `Dear ${user.displayName || "User"},\n\nYour appointment with Dr. ${doctorName} at ${hospitalName} on ${date} at ${time} has been successfully submitted and is pending approval. You will receive another email once it is reviewed.\n\nBest regards,\nMigrantBot Team`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
           <h2>Appointment Request Submitted</h2>
           <p>Dear ${user.displayName || "User"},</p>
           <p>Your appointment with Dr. ${doctorName} at ${hospitalName} on ${date} at ${time} has been successfully submitted and is pending approval. You will receive another email once it is reviewed.</p>
-          <p>Best regards,<br>MediBot Team</p>
+          <p>Best regards,<br>MigrantBot Team</p>
         </div>
       `,
     };
 
     // Admin review request email with approve/reject links
     const adminEmailData = {
-      from: "MediBot <no-reply@your-domain.com>", // Replace with your Resend-verified domain
+      from: "MigrantBot <no-reply@your-domain.com>", // Replace with your Resend-verified domain
       to: ["sujayss762@gmail.com"],
       subject: "New Appointment Request for Review",
-      text: `Dear Admin,\n\nA new appointment request has been submitted:\n\n- User: ${user.displayName || user.email}\n- Hospital: ${hospitalName}\n- Address: ${hospitalAddress}\n- Doctor: Dr. ${doctorName}\n- Type: ${appointmentType}\n- Date: ${date}\n- Time: ${time}\n\nPlease review and take action:\n- Approve: ${baseUrl}/approveAppointment?token=${approveToken}\n- Reject: ${baseUrl}/rejectAppointment?token=${rejectToken}\n\nThese links expire in 24 hours.\n\nBest regards,\nMediBot Team`,
+      text: `Dear Admin,\n\nA new appointment request has been submitted:\n\n- User: ${user.displayName || user.email}\n- Hospital: ${hospitalName}\n- Address: ${hospitalAddress}\n- Doctor: Dr. ${doctorName}\n- Type: ${appointmentType}\n- Date: ${date}\n- Time: ${time}\n\nPlease review and take action:\n- Approve: ${baseUrl}/approveAppointment?token=${approveToken}\n- Reject: ${baseUrl}/rejectAppointment?token=${rejectToken}\n\nThese links expire in 24 hours.\n\nBest regards,\nMigrantBot Team`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
           <h2>New Appointment Request</h2>
@@ -135,7 +135,7 @@ exports.sendAppointmentConfirmationAndReview = functions.firestore
             <a href="${baseUrl}/rejectAppointment?token=${rejectToken}" style="background-color: #f44336; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Reject</a>
           </div>
           <p><em>These links expire in 24 hours.</em></p>
-          <p>Best regards,<br>MediBot Team</p>
+          <p>Best regards,<br>MigrantBot Team</p>
         </div>
       `,
     };
@@ -187,25 +187,25 @@ exports.sendAppointmentStatusEmail = functions.firestore
     switch (status) {
       case "approved":
         subject = "Your Appointment Has Been Approved";
-        text = `Dear ${user.displayName || "User"},\n\nYour appointment with Dr. ${doctorName} at ${hospitalName} on ${date} at ${time} has been approved.\n\nBest regards,\nMediBot Team`;
+        text = `Dear ${user.displayName || "User"},\n\nYour appointment with Dr. ${doctorName} at ${hospitalName} on ${date} at ${time} has been approved.\n\nBest regards,\nMigrantBot Team`;
         html = `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
             <h2>Appointment Approved</h2>
             <p>Dear ${user.displayName || "User"},</p>
             <p>Your appointment with Dr. ${doctorName} at ${hospitalName} on ${date} at ${time} has been approved.</p>
-            <p>Best regards,<br>MediBot Team</p>
+            <p>Best regards,<br>MigrantBot Team</p>
           </div>
         `;
         break;
       case "rejected":
         subject = "Your Appointment Has Been Rejected";
-        text = `Dear ${user.displayName || "User"},\n\nUnfortunately, your appointment with Dr. ${doctorName} at ${hospitalName} on ${date} at ${time} has been rejected. Please contact the hospital for more details or book another appointment.\n\nBest regards,\nMediBot Team`;
+        text = `Dear ${user.displayName || "User"},\n\nUnfortunately, your appointment with Dr. ${doctorName} at ${hospitalName} on ${date} at ${time} has been rejected. Please contact the hospital for more details or book another appointment.\n\nBest regards,\nMigrantBot Team`;
         html = `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
             <h2>Appointment Rejected</h2>
             <p>Dear ${user.displayName || "User"},</p>
             <p>Unfortunately, your appointment with Dr. ${doctorName} at ${hospitalName} on ${date} at ${time} has been rejected. Please contact the hospital for more details or book another appointment.</p>
-            <p>Best regards,<br>MediBot Team</p>
+            <p>Best regards,<br>MigrantBot Team</p>
           </div>
         `;
         break;
@@ -214,7 +214,7 @@ exports.sendAppointmentStatusEmail = functions.firestore
     }
 
     const emailData = {
-      from: "MediBot <no-reply@your-domain.com>", // Replace with your Resend-verified domain
+      from: "MigrantBot <no-reply@your-domain.com>", // Replace with your Resend-verified domain
       to: [email],
       subject,
       text,

@@ -21,7 +21,7 @@ export interface UserComprehensiveData {
 }
 
 // Encryption key for QR data
-const QR_ENCRYPTION_KEY = process.env.NEXT_PUBLIC_QR_ENCRYPTION_KEY || 'medibot-qr-key-32-characters-long';
+const QR_ENCRYPTION_KEY = process.env.NEXT_PUBLIC_QR_ENCRYPTION_KEY || 'MigrantBot-qr-key-32-characters-long';
 
 export async function GET(req: NextRequest) {
   try {

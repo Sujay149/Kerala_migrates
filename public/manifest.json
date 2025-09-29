@@ -1,6 +1,6 @@
 {
-  "name": "MediBot Kerala Digital Health - Complete Healthcare Management",
-  "short_name": "MediBot Kerala",
+  "name": "MigrantBot Kerala Digital Health - Complete Healthcare Management",
+  "short_name": "MigrantBot Kerala",
   "description": "Kerala Government's comprehensive digital health platform with AI assistance, medication management, telemedicine, health analytics, and 18+ advanced healthcare features",
   "start_url": "/",
   "display": "standalone",
@@ -17,14 +17,14 @@
       "sizes": "1200x800",
       "type": "image/png",
       "form_factor": "wide",
-      "label": "MediBot Kerala Dashboard - Complete Healthcare Management"
+      "label": "MigrantBot Kerala Dashboard - Complete Healthcare Management"
     },
     {
       "src": "/mobileview.png",
       "sizes": "390x844",
       "type": "image/png",
       "form_factor": "narrow",
-      "label": "MediBot Kerala Mobile - Healthcare On The Go"
+      "label": "MigrantBot Kerala Mobile - Healthcare On The Go"
     }
   ],
   "icons": [
@@ -128,7 +128,7 @@
   "related_applications": [
     {
       "platform": "webapp",
-      "url": "https://medibot-kerala.gov.in/"
+      "url": "https://MigrantBot-kerala.gov.in/"
     }
   ],
   "prefer_related_applications": false

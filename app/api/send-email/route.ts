@@ -43,7 +43,7 @@ function createMedicationReminderTemplate(data: EmailRequest): string {
     <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
         <div style="background: linear-gradient(135deg, #0E7490 0%, #0D9488 100%); padding: 30px; border-radius: 12px; text-align: center; margin-bottom: 30px;">
             <h1 style="color: white; margin: 0; font-size: 28px; font-weight: bold;">🏥 Kerala Digital Health</h1>
-            <p style="color: #E0F2FE; margin: 10px 0 0 0; font-size: 16px;">MediBot - Your AI Health Assistant</p>
+            <p style="color: #E0F2FE; margin: 10px 0 0 0; font-size: 16px;">MigrantBot - Your AI Health Assistant</p>
         </div>
         
         <div style="background: #f8f9fa; padding: 25px; border-radius: 8px; border-left: 4px solid #0E7490;">
@@ -81,16 +81,16 @@ function createMedicationReminderTemplate(data: EmailRequest): string {
                 <li style="margin-bottom: 8px;">Take your medication at the prescribed time</li>
                 <li style="margin-bottom: 8px;">Follow the dosage instructions carefully</li>
                 <li style="margin-bottom: 8px;">Contact your healthcare provider if you have concerns</li>
-                <li style="margin-bottom: 0;">Keep track of your medication schedule in the MediBot app</li>
+                <li style="margin-bottom: 0;">Keep track of your medication schedule in the MigrantBot app</li>
             </ul>
         </div>
         
         <div style="text-align: center; margin: 30px 0;">
-            <a href="https://medibot-kerala.gov.in/medications" style="background: #0E7490; color: white; padding: 15px 30px; text-decoration: none; border-radius: 6px; font-weight: bold; display: inline-block;">📱 Open MediBot App</a>
+            <a href="https://MigrantBot-kerala.gov.in/medications" style="background: #0E7490; color: white; padding: 15px 30px; text-decoration: none; border-radius: 6px; font-weight: bold; display: inline-block;">📱 Open MigrantBot App</a>
         </div>
         
         <div style="border-top: 1px solid #e0e0e0; padding: 20px 0; text-align: center; color: #666; font-size: 14px;">
-            <p style="margin: 0 0 10px 0;">This message was sent by <strong>Kerala Digital Health - MediBot</strong></p>
+            <p style="margin: 0 0 10px 0;">This message was sent by <strong>Kerala Digital Health - MigrantBot</strong></p>
             <p style="margin: 0; font-size: 12px;">🏥 Government of Kerala Digital Health Initiative</p>
         </div>
     </body>
@@ -150,7 +150,7 @@ export async function POST(request: NextRequest) {
     console.log('🔐 Using Web3Forms access key ending with:', accessKey.slice(-8));
     
     // Create ONLY plain text content - NO HTML to avoid HTML code in emails
-    const plainTextContent = `Kerala Digital Health - MediBot
+    const plainTextContent = `Kerala Digital Health - MigrantBot
 💊 Medication Reminder
 
 Hello ${body.userName || 'Dear User'},
@@ -168,9 +168,9 @@ Important Reminders:
 • Take your medication at the prescribed time
 • Follow the dosage instructions carefully
 • Contact your healthcare provider if you have concerns
-• Keep track of your medication schedule in the MediBot app
+• Keep track of your medication schedule in the MigrantBot app
 
-This message was sent by Kerala Digital Health - MediBot
+This message was sent by Kerala Digital Health - MigrantBot
 🏥 Government of Kerala Digital Health Initiative
     `;
     
@@ -178,7 +178,7 @@ This message was sent by Kerala Digital Health - MediBot
     const web3formsPayload = {
       access_key: accessKey,
       to: body.to,
-      from: 'MediBot Kerala Digital Health <noreply@medibot-kerala.gov.in>',
+      from: 'MigrantBot Kerala Digital Health <noreply@MigrantBot-kerala.gov.in>',
       subject: body.subject,
       message: plainTextContent  // Only use message field, no html field
     };

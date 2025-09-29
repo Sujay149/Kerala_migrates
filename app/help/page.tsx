@@ -7,8 +7,8 @@ export default function HelpPage() {
 
   const faqItems = [
     {
-      question: "How to use MediBot features",
-      answer: "MediBot offers various features like symptom checking, medication reminders, and health tracking. You can access these from the main dashboard after logging into your account."
+      question: "How to use MigrantBot features",
+      answer: "MigrantBot offers various features like symptom checking, medication reminders, and health tracking. You can access these from the main dashboard after logging into your account."
     },
     {
       question: "Account setup and management",
@@ -61,10 +61,10 @@ export default function HelpPage() {
       {/* Header */}
       <header className="pt-8 pb-12 px-4 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
-          MediBot Help Center
+          MigrantBot Help Center
         </h1>
         <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-          Find answers to common questions, troubleshooting tips, and resources to get the most out of MediBot.
+          Find answers to common questions, troubleshooting tips, and resources to get the most out of MigrantBot.
         </p>
         
         {/* Search Bar */}
@@ -186,7 +186,7 @@ export default function HelpPage() {
       </main>
 
       <footer className="text-center py-8 text-gray-500 text-sm">
-        <p>© {new Date().getFullYear()} MediBot AI. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} MigrantBot AI. All rights reserved.</p>
       </footer>
     </div>
   );

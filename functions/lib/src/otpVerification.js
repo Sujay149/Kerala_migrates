@@ -93,13 +93,13 @@ exports.sendOTP = functions.https.onCall(async (data, context) => {
         // Send email with proper error handling
         const emailConfig = functions.config().email;
         const mailOptions = {
-            from: emailConfig?.user || 'noreply@medibot.com',
+            from: emailConfig?.user || 'noreply@MigrantBot.com',
             to: email,
-            subject: 'MediBot - Email Verification Code',
+            subject: 'MigrantBot - Email Verification Code',
             html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
           <div style="text-align: center; margin-bottom: 30px;">
-            <img src="https://your-domain.com/logo.png" alt="MediBot" style="width: 120px; height: auto;">
+            <img src="https://your-domain.com/logo.png" alt="MigrantBot" style="width: 120px; height: auto;">
             <h1 style="color: #2563eb; margin: 20px 0;">Email Verification</h1>
           </div>
           
@@ -118,7 +118,7 @@ exports.sendOTP = functions.https.onCall(async (data, context) => {
               If you didn't request this verification code, please ignore this email.
             </p>
             <p style="color: #64748b; font-size: 14px;">
-              This is an automated email from MediBot. Please do not reply.
+              This is an automated email from MigrantBot. Please do not reply.
             </p>
           </div>
         </div>

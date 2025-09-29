@@ -20,7 +20,7 @@ import { getUserProfile, type UserProfile } from "@/lib/firestore";
 import { validateAdminCredentials, isAdminEmail, getAdminRole, type AdminCredentials } from "@/lib/admin-config";
 
 // Constants for caching
-const PROFILE_CACHE_KEY = "medibot_user_profile";
+const PROFILE_CACHE_KEY = "MigrantBot_user_profile";
 
 const getCachedProfile = (uid: string): UserProfile | null => {
   try {

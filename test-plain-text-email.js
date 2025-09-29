@@ -2,7 +2,7 @@
 const ACCESS_KEY = "bbfdd300-0a27-49d6-8999-f97857ebd39f";
 
 const testDirectPlainText = async () => {
-  const plainTextMessage = `Kerala Digital Health - MediBot
+  const plainTextMessage = `Kerala Digital Health - MigrantBot
 💊 Medication Reminder
 
 Hello John Doe,
@@ -20,15 +20,15 @@ Important Reminders:
 • Take your medication at the prescribed time
 • Follow the dosage instructions carefully
 • Contact your healthcare provider if you have concerns
-• Keep track of your medication schedule in the MediBot app
+• Keep track of your medication schedule in the MigrantBot app
 
-This message was sent by Kerala Digital Health - MediBot
+This message was sent by Kerala Digital Health - MigrantBot
 🏥 Government of Kerala Digital Health Initiative`;
 
   const testPayload = {
     access_key: ACCESS_KEY,
     to: "sujayss149@gmail.com",
-    from: "MediBot Kerala Digital Health <noreply@medibot-kerala.gov.in>",
+    from: "MigrantBot Kerala Digital Health <noreply@MigrantBot-kerala.gov.in>",
     subject: "PLAIN TEXT TEST - Medication Reminder",
     message: plainTextMessage // ONLY plain text, NO HTML field
   };
