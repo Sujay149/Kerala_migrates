@@ -512,7 +512,7 @@ export default function HomePage() {
               icon: <Clock className="h-6 w-6 text-green-600" />,
               titleKey: "timelyRemindersTitle" as const,
               descriptionKey: "timelyRemindersDesc" as const,
-              image: "/medication.png",
+              image: "/reminders-icon.png",
               link: "/reminders"
             },
             {
