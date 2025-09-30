@@ -4,7 +4,7 @@ import * as CryptoJS from 'crypto-js';
 
 // Encryption key for QR data
 const QR_ENCRYPTION_KEY = process.env.NEXT_PUBLIC_QR_ENCRYPTION_KEY || 'MigrantBot-qr-key-32-characters-long';
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://kerala-migrates-r4io.onrender.com/';
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://safe-kerala.vercel.app/';
 
 export async function POST(req: NextRequest) {
   try {

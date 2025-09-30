@@ -21,9 +21,13 @@ import {
   Eye,
   Trash2,
   Download,
-  Menu
+  Menu,
+  Phone,
+  User,
+  Users
 } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
+import Link from 'next/link';
 
 interface UploadedFile {
   id: string;
