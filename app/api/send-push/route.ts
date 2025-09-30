@@ -1,17 +1,7 @@
 import { NextResponse } from "next/server";
-import admin from "firebase-admin";
+import getAdmin from '@/lib/firebase-admin';
 
-// Initialize Firebase Admin SDK (only once)
-if (!admin.apps.length) {
-  if (!process.env.FIREBASE_SERVICE_ACCOUNT_KEY) {
-    throw new Error('FIREBASE_SERVICE_ACCOUNT_KEY environment variable is not set');
-  }
-  const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT_KEY);
-  serviceAccount.private_key = serviceAccount.private_key.replace(/\\n/g, '\n');
-  admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount),
-  });
-}
+const admin = getAdmin();
 
 export async function POST(req: Request) {
   try {
@@ -29,6 +19,11 @@ export async function POST(req: Request) {
       notification: { title, body },
       data: { timestamp: Date.now().toString() },
     };
+
+    if (!admin) {
+      console.warn('Firebase Admin not initialized - send-push cannot send notifications');
+      return NextResponse.json({ success: false, error: 'Firebase Admin not configured' }, { status: 503 });
+    }
 
     console.log("Sending FCM message:", message);
     const response = await admin.messaging().send(message);

@@ -1,19 +1,9 @@
 import { NextResponse } from "next/server";
 import { db } from "@/lib/firebase";
 import { collection, query, where, getDocs, doc, updateDoc, getDoc } from "firebase/firestore";
-import admin from "firebase-admin";
+import getAdmin from '@/lib/firebase-admin';
 
-// Initialize Firebase Admin SDK (only once)
-if (!admin.apps.length) {
-  if (!process.env.FIREBASE_SERVICE_ACCOUNT_KEY) {
-    throw new Error('FIREBASE_SERVICE_ACCOUNT_KEY environment variable is not set');
-  }
-  const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT_KEY);
-  serviceAccount.private_key = serviceAccount.private_key.replace(/\\n/g, '\n');
-  admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount),
-  });
-}
+const admin = getAdmin();
 
 export async function GET() {
   try {
@@ -108,6 +98,11 @@ export async function GET() {
             }
           };
           
+          if (!admin) {
+            console.warn('Firebase Admin not initialized - skipping push sending');
+            return { success: false, error: 'Firebase Admin not configured' };
+          }
+
           // Send FCM notification
           const response = await admin.messaging().send(message);
           console.log(`✅ Notification sent for ${reminder.medicationName} to user ${reminder.userId}:`, response);

@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
-import admin from 'firebase-admin';
+import getAdmin from '@/lib/firebase-admin';
+
+const admin = getAdmin();
 
 export async function GET(req: NextRequest) {
   try {
@@ -12,6 +14,8 @@ export async function GET(req: NextRequest) {
     const token = authHeader.split(' ')[1];
     let decodedToken;
 
+    if (!admin) return NextResponse.json({ error: 'Firebase Admin not configured' }, { status: 503 });
+
     try {
       decodedToken = await admin.auth().verifyIdToken(token);
     } catch (error) {
@@ -19,7 +23,7 @@ export async function GET(req: NextRequest) {
     }
 
     // Get user record to check custom claims
-    const userRecord = await admin.auth().getUser(decodedToken.uid);
+  const userRecord = await admin.auth().getUser(decodedToken.uid);
     const customClaims = userRecord.customClaims;
     
     return NextResponse.json({
