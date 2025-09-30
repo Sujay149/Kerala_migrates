@@ -78,70 +78,7 @@ const Header = ({ user, onMenuToggle }: { user: any; onMenuToggle: () => void })
   const [showDropdown, setShowDropdown] = useState(false);
   
   return (
-    <header className="bg-slate-700 text-white p-4 shadow-lg">
-      <div className="flex items-center justify-between">
-        <div className="flex items-center space-x-4">
-          <button
-            onClick={onMenuToggle}
-            className="md:hidden p-2 rounded-lg hover:bg-slate-600"
-          >
-            <Menu className="h-6 w-6" />
-          </button>
-          
-          <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 rounded-full bg-slate-600 flex items-center justify-center">
-              <Globe className="h-6 w-6" />
-            </div>
-            <h1 className="text-2xl font-bold">Athidhi Portal</h1>
-          </div>
-        </div>
-        
-        <div className="flex items-center space-x-4">
-          <div className="hidden md:flex items-center space-x-2 text-sm">
-            <Clock className="h-4 w-4" />
-            <span>Idle timeout in 19:53</span>
-          </div>
-          
-          <div className="flex items-center space-x-4">
-            <button className="p-2 rounded-lg hover:bg-slate-600">
-              <Home className="h-5 w-5" />
-            </button>
-            <button className="p-2 rounded-lg hover:bg-slate-600">
-              <Grid3X3 className="h-5 w-5" />
-            </button>
-            <button className="p-2 rounded-lg hover:bg-slate-600">
-              <Menu className="h-5 w-5" />
-            </button>
-            
-            <div className="relative">
-              <button
-                onClick={() => setShowDropdown(!showDropdown)}
-                className="flex items-center space-x-2 p-2 rounded-lg hover:bg-slate-600"
-              >
-                <User className="h-5 w-5" />
-                <ChevronDown className="h-4 w-4" />
-              </button>
-              
-              {showDropdown && (
-                <div className="absolute right-0 mt-2 w-48 bg-white text-slate-800 rounded-lg shadow-lg z-50">
-                  <div className="p-3 border-b">
-                    <p className="font-medium">Welcome {user?.displayName || 'User'}</p>
-                  </div>
-                  <button className="w-full text-left p-3 hover:bg-gray-100 flex items-center space-x-2">
-                    <Settings className="h-4 w-4" />
-                    <span>Settings</span>
-                  </button>
-                  <button className="w-full text-left p-3 hover:bg-gray-100 flex items-center space-x-2 text-red-600">
-                    <LogOut className="h-4 w-4" />
-                    <span>Logout</span>
-                  </button>
-                </div>
-              )}
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
+    <header className="bg-slate-700 text-white p-4 shadow-lg"></header>
   );
 };
 
