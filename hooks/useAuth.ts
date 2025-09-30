@@ -61,6 +61,17 @@ export function useAuth() {
 
   // Auth state listener
   useEffect(() => {
+    // Ensure auth persistence is set to local by default so sessions survive browser restarts
+    (async () => {
+      try {
+        const { browserLocalPersistence, setPersistence } = await import('firebase/auth');
+        await setPersistence(auth, browserLocalPersistence);
+        console.log('useAuth: Set Firebase auth persistence to browserLocalPersistence');
+      } catch (err) {
+        console.warn('useAuth: Could not set auth persistence, falling back to default.', err);
+      }
+    })();
+
     const unsubscribeAuth = onAuthStateChanged(auth, (firebaseUser) => {
       setUser(firebaseUser);
       setLoading(false); // Done with auth check
@@ -136,8 +147,8 @@ export function useAuth() {
   }, [user, refreshProfile]);
 
   // Auth functions
-  const signIn = async (email: string, password: string, rememberMe: boolean = false) => {
-    // Set persistence based on rememberMe
+  const signIn = async (email: string, password: string, rememberMe: boolean = true) => {
+    // Set persistence based on rememberMe (default to true for local persistence)
     const { browserLocalPersistence, browserSessionPersistence, setPersistence } = await import('firebase/auth');
     await setPersistence(auth, rememberMe ? browserLocalPersistence : browserSessionPersistence);
     
@@ -256,13 +267,13 @@ const signUp = async (
 };
 
 
-  const signInWithGoogle = async (rememberMe: boolean = false) => {
+  const signInWithGoogle = async (rememberMe: boolean = true) => {
     const { browserLocalPersistence, browserSessionPersistence, setPersistence } = await import('firebase/auth');
     await setPersistence(auth, rememberMe ? browserLocalPersistence : browserSessionPersistence);
     return signInWithPopup(auth, googleProvider);
   };
 
-  const signInWithFacebook = async (rememberMe: boolean = false) => {
+  const signInWithFacebook = async (rememberMe: boolean = true) => {
     const { browserLocalPersistence, browserSessionPersistence, setPersistence } = await import('firebase/auth');
     await setPersistence(auth, rememberMe ? browserLocalPersistence : browserSessionPersistence);
     return signInWithPopup(auth, facebookProvider);

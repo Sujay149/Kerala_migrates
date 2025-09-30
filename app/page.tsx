@@ -152,7 +152,7 @@ export default function HomePage() {
       featuresTitle: "Take Control of Your Health",
       featuresDescription: "SafeKerala combines technology with intuitive design for health management in Kerala's digital health initiative.",
       smartMedicationTitle: "Smart Medication Tracking",
-      smartMedicationDesc: "Log and track medications. Set schedules, view history, get insights.",
+      smartMedicationDesc: "Unified platform for digital health records.",
       aiHealthChatTitle: "AI-Powered Health Chat",
       aiHealthChatDesc: "Ask about health or prescriptions. Get personalized advice.",
       timelyRemindersTitle: "Timely Reminders",
@@ -423,21 +423,55 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Hero Image */}
-          <div
-            className="mt-16 relative"
-          >
-            <div className="relative max-w-4xl mx-auto rounded-md overflow-hidden border border-gray-300">
-              <Image
-                src="/main.png"
-                alt="SafeKerala App Dashboard - Kerala Digital Health Records"
-                width={1200}
-                height={800}
-                className="w-full h-auto"
-                priority
-              />
+          {/* Hero Image + Content (two-column on md+) */}
+          <div className="mt-16 relative">
+            <div className="max-w-6xl mx-auto rounded-md overflow-hidden border border-gray-300">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                {/* Image (left on md+) */}
+                <div className="p-4 flex items-center justify-center">
+                  <div className="w-full max-w-xl rounded-md overflow-hidden">
+                    <Image
+                      src="/main.png"
+                      alt="SafeKerala App Dashboard - Kerala Digital Health Records"
+                      width={800}
+                      height={450}
+                      className="w-full h-auto object-cover rounded-md"
+                      priority
+                    />
+                  </div>
+                </div>
+
+                {/* Related content (right on md+) */}
+                <div className="p-8">
+                  <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('personalCompanionTitle')}</h2>
+                  <p className="text-lg text-gray-700 mb-6">{t('personalCompanionDesc')}</p>
+
+                  <ul className="space-y-3 mb-6">
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-600 mt-1 mr-3 flex-shrink-0" />
+                      <span className="text-gray-600">{t('twentyFourSeven')}</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-600 mt-1 mr-3 flex-shrink-0" />
+                      <span className="text-gray-600">{t('personalizedAdvice')}</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-600 mt-1 mr-3 flex-shrink-0" />
+                      <span className="text-gray-600">{t('instantNotifications')}</span>
+                    </li>
+                  </ul>
+
+                  <div className="flex items-center gap-4">
+                    <Link href="/chat">
+                      <Button className="bg-green-600 text-white hover:bg-green-700">{t('tryAiAssistant')}</Button>
+                    </Link>
+                    <Button asChild className="bg-white border border-green-600 text-green-600 hover:bg-green-50">
+                      <a href="/safekerala.apk" download="safekerala.apk" onClick={handleDownload}>{t('downloadApp')}</a>
+                    </Button>
+                  </div>
+                </div>
+              </div>
             </div>
-            {/* Removed floating elements */}
           </div>
         </div>
       </section>
@@ -462,16 +496,16 @@ export default function HomePage() {
           {[
             {
               icon: <Pill className="h-6 w-6 text-green-600" />,
-              titleKey: "smartMedicationTitle" as const,
+              titleKey: "Smart Health Record Traking for Migrant People" as const,
               descriptionKey: "smartMedicationDesc" as const,
-              image: "/healthtrack.png",
-              link: "/medications"
+              image: "/healthtracking.png",
+              link: "/migrant-profile"
             },
             {
               icon: <MessageCircle className="h-6 w-6 text-green-600" />,
               titleKey: "aiHealthChatTitle" as const,
               descriptionKey: "aiHealthChatDesc" as const,
-              image: "/chat.png",
+              image: "/main page/chat.png",
               link: "/chat"
             },
             {
@@ -552,7 +586,7 @@ export default function HomePage() {
             >
               <div className="relative rounded-md overflow-hidden border border-gray-300">
                 <Image
-                  src="/mobileview.png"
+                  src="/main page/mobileview.png"
                   alt="SafeKerala Mobile App"
                   width={600}
                   height={600}
@@ -608,7 +642,7 @@ export default function HomePage() {
             >
               <div className="relative rounded-md overflow-hidden border border-gray-300">
                 <Image
-                  src="/chatroom.png"
+                  src="/main page/chatpage.png"
                   alt="SafeKerala AI Assistant"
                   width={600}
                   height={600}
@@ -794,12 +828,12 @@ export default function HomePage() {
                       href="/chat"
                       className="text-gray-600 hover:text-green-800 transition-colors"
                     >
-                      {t('prescriptionAnalysis')}
+                      
                     </Link>
                   </li>
                 </ul>
               </div>
-              <div>
+              {/* <div>
                 <h3 className="text-gray-900 font-semibold mb-4">{t('legal')}</h3>
                 <ul className="space-y-3">
                   <li>
@@ -835,7 +869,7 @@ export default function HomePage() {
                     </Link>
                   </li>
                 </ul>
-              </div>
+              </div> */}
             </div>
           </div>
 
